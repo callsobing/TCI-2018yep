@@ -1,0 +1,38 @@
+<html>
+<head></head>
+<body>
+<div id="myPie"></div>
+<script src="http://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+
+<script src="http://d3js.org/d3pie.js"></script>
+<script src="http://d3js.org/d3.min.js"></script>
+<script>
+    var pie = new d3pie("myPie", {
+        header: {
+            title: {
+                text: "A very simple example pie"
+            }
+        },
+        data: {
+            content: [
+                { label: "JavaScript", value: 50 },
+                { label: "Ruby", value: 20 },
+                { label: "Java", value: 30},
+            ]
+        },
+
+//Here further operations/animations can be added like click event, cut out the clicked pie section.
+        callbacks: {
+            onMouseoverSegment: function(info) {
+                console.log("mouse in", info);
+            },
+            onMouseoutSegment: function(info) {
+                console.log("mouseout:", info);
+            }
+        }
+
+    });
+
+</script>
+</body>
+</html>

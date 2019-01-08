@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Yian.Tung@TCI">
+    <meta name="copyright" content="Yian.Tung@TCI">
+    <title></title>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script>
+        window.addEventListener('load',function(){
+
+            var data=[
+                {x:1, w:Math.floor(Math.random()*500), label:"food"},
+                {x:2, w:Math.floor(Math.random()*500), label:"food"},
+                {x:3, w:Math.floor(Math.random()*500), label:"food"},
+                {x:4, w:Math.floor(Math.random()*500), label:"food"},
+                {x:5, w:Math.floor(Math.random()*500), label:"food"},
+                {x:6, w:Math.floor(Math.random()*500), label:"food"},
+                {x:7, w:Math.floor(Math.random()*500), label:"food"},
+                {x:8, w:Math.floor(Math.random()*500), label:"food3"},
+                {x:9, w:Math.floor(Math.random()*500), label:"food2"},
+                {x:10, w:Math.floor(Math.random()*500), label:"food1"},
+            ];
+
+            var s = d3.select('body')
+                .append('svg')
+                .attr({
+                    'width':800,
+                    'height':800
+                });
+
+            s.selectAll('rect')
+                .data(data)
+                .enter()
+                .append('rect')
+                .attr({
+                    'fill':'#cca570',
+                    'width':0,
+                    'height':50,
+                    'x':0,
+                    'y':function(d){
+                        return (d.x-1) * 55;
+                    }
+                })
+                .transition(3000)
+                .duration(10000)
+                .attr({
+                    'width':function(d){
+                        return d.w;
+                    }
+                });
+
+            s.selectAll('text')
+                .data(data)
+                .enter()
+                .append('text')
+                .text(function(d){
+                    return 0  ;
+                })
+                .attr({
+                    'fill':'#000',
+                    'x':3,
+                    'y':function(d){
+                        return d.x * 55 - 22;
+                    }
+                })
+                .transition(3000)
+                .duration(10000)
+                .attr({
+                    'x':function(d){
+                        return d.w + 3;
+                    }
+                })
+                .tween('number',function(d){
+                    var i = d3.interpolateRound(0, d.w);
+                    return function(t) {
+                        this.textContent = i(t);
+                    };
+                });
+        },false);
+
+        var xScale = d3.scale.ordinal().rangeRoundBands([0, width], .03);
+
+        xScale.domain(data.map(function(d) { return d.label; }));
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
