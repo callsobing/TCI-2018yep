@@ -80,31 +80,6 @@
                     };
                 });
 
-            s.append('rect')
-                .attr({
-                    fill:'#5383ff',
-                    x :3,
-                    y :function(d){
-                        return d.x * 55 - 22;
-                    },
-                    width: 20,
-                    height: 20
-                })
-                .style({
-                    fill: 'steelblue',
-                    stroke: 'green',
-                    'stroke-width': 10,
-                    'fill-opacity': .5
-                })
-                .transition(3000)
-                .duration(10000)
-                .tween('number',function(d){
-                    var i = d3.interpolateRound(0, d.w);
-                    return function(t) {
-                        this.textContent = i(t);
-                    };
-                });
-
         },false);
 
     </script>
