@@ -79,6 +79,36 @@
                         this.textContent = i(t);
                     };
                 });
+
+
+            s.selectAll('text')
+                .data(data)
+                .enter()
+                .append('text')
+                .text(function(d){
+                    return 0  ;
+                })
+                .attr({
+                    'fill':'#000',
+                    'x':3,
+                    'y':function(d){
+                        return d.x * 55 - 22;
+                    }
+                })
+                .transition(3000)
+                .duration(10000)
+                .attr({
+                    'x':function(d){
+                        return d.w -10;
+                    }
+                })
+                .tween('number',function(d){
+                    var i = d3.interpolateRound(0, d.w);
+                    return function(t) {
+                        this.textContent = i(t);
+                    };
+                });
+
         },false);
 
     </script>
