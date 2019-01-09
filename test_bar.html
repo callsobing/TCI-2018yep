@@ -66,10 +66,6 @@
                         return d.x * 55 - 22;
                     }
                 })
-                .append('div') //加入包含資料的div，這個div是用來畫圖用的
-                .text(function (d) {
-                    return d.label; //畫圖用div加上文字描述，使用json檔案裡面的 "count" 欄位
-                })
                 .transition(3000)
                 .duration(10000)
                 .attr({
