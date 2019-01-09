@@ -13,23 +13,23 @@
         window.addEventListener('load',function(){
 
             var data=[
-                {x:1, w:Math.floor(Math.random()*900), label:"food"},
-                {x:2, w:Math.floor(Math.random()*900), label:"food"},
-                {x:3, w:Math.floor(Math.random()*900), label:"food"},
-                {x:4, w:Math.floor(Math.random()*900), label:"food"},
-                {x:5, w:Math.floor(Math.random()*900), label:"food"},
-                {x:6, w:Math.floor(Math.random()*900), label:"food"},
-                {x:7, w:Math.floor(Math.random()*900), label:"food"},
-                {x:8, w:Math.floor(Math.random()*900), label:"food3"},
-                {x:9, w:Math.floor(Math.random()*900), label:"food2"},
-                {x:10, w:Math.floor(Math.random()*900), label:"food1"},
+                {x:1, w:Math.floor(Math.random()*1400), label:"food"},
+                {x:2, w:Math.floor(Math.random()*1400), label:"food"},
+                {x:3, w:Math.floor(Math.random()*1400), label:"food"},
+                {x:4, w:Math.floor(Math.random()*1400), label:"food"},
+                {x:5, w:Math.floor(Math.random()*1400), label:"food"},
+                {x:6, w:Math.floor(Math.random()*1400), label:"food"},
+                {x:7, w:Math.floor(Math.random()*1400), label:"food"},
+                {x:8, w:Math.floor(Math.random()*1400), label:"food3"},
+                {x:9, w:Math.floor(Math.random()*1400), label:"food2"},
+                {x:10, w:Math.floor(Math.random()*1400), label:"food1"},
             ];
 
             var s = d3.select('body')
                 .append('svg')
                 .attr({
-                    'width': 1000 ,
-                    'height':1000
+                    'width': 1500 ,
+                    'height':1500
                 });
 
             s.selectAll('rect')
