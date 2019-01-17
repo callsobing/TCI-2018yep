@@ -7,7 +7,7 @@ $employee_score_file = "data/employee_ranking.txt";
 $file = fopen($employee_score_file, "r");
 $employee_key = [];
 while (!feof($file)) {
-    $items = preg_split('/\t/', fgets($file));
+    $items = preg_split('/\t/', utf8_encode(fgets($file)));
     echo($items[0]);
     $rankings += array($items[0] => floatval($items[1]));
     array_push($employee_key, $items[0]);
