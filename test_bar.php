@@ -103,6 +103,7 @@ while (!feof($file)) {
 </head>
 
 <body>
+<?php echo($rankings[$employee_key[0]]); ?>
 </body>
 
 </html>
