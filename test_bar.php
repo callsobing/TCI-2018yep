@@ -25,16 +25,16 @@ while (!feof($file)) {
         window.addEventListener('load',function(){
 
             var data = [
-                {x:1, w:Math.floor(Math.random()*900), label:"<?php $rankings[$employee_key[0]] ?>", color: "#628395"},
-                {x:2, w:Math.floor(Math.random()*900), label:"<?php $rankings[$employee_key[1]] ?>", color: "#96897B"},
-                {x:3, w:Math.floor(Math.random()*900), label:"<?php $rankings[$employee_key[2]] ?>", color: "#DBAD6A"},
-                {x:4, w:Math.floor(Math.random()*900), label:"<?php $rankings[$employee_key[3]] ?>", color: "#CF995F"},
-                {x:5, w:Math.floor(Math.random()*900), label:"<?php $rankings[$employee_key[4]] ?>", color: "#D0CE7C"},
-                {x:6, w:Math.floor(Math.random()*900), label:"<?php $rankings[$employee_key[5]] ?>", color: "#735751"},
-                {x:7, w:Math.floor(Math.random()*900), label:"<?php $rankings[$employee_key[6]] ?>", color: "#A78A7F"},
-                {x:8, w:Math.floor(Math.random()*900), label:"<?php $rankings[$employee_key[7]] ?>", color: "#E7D7C1"},
-                {x:9, w:Math.floor(Math.random()*900), label:"<?php $rankings[$employee_key[8]] ?>", color: "#BF4342"},
-                {x:10, w:Math.floor(Math.random()*900), label:"<?php $rankings[$employee_key[9]] ?>", color: "#8C1C13"},
+                {x:1, w:Math.floor(Math.random()*900), label:"<?php echo($rankings[$employee_key[0]]) ?>", color: "#628395"},
+                {x:2, w:Math.floor(Math.random()*900), label:"<?php echo($rankings[$employee_key[1]]) ?>", color: "#96897B"},
+                {x:3, w:Math.floor(Math.random()*900), label:"<?php echo($rankings[$employee_key[2]]) ?>", color: "#DBAD6A"},
+                {x:4, w:Math.floor(Math.random()*900), label:"<?php echo($rankings[$employee_key[3]]) ?>", color: "#CF995F"},
+                {x:5, w:Math.floor(Math.random()*900), label:"<?php echo($rankings[$employee_key[4]]) ?>", color: "#D0CE7C"},
+                {x:6, w:Math.floor(Math.random()*900), label:"<?php echo($rankings[$employee_key[5]]) ?>", color: "#735751"},
+                {x:7, w:Math.floor(Math.random()*900), label:"<?php echo($rankings[$employee_key[6]]) ?>", color: "#A78A7F"},
+                {x:8, w:Math.floor(Math.random()*900), label:"<?php echo($rankings[$employee_key[7]]) ?>", color: "#E7D7C1"},
+                {x:9, w:Math.floor(Math.random()*900), label:"<?php echo($rankings[$employee_key[8]]) ?>", color: "#BF4342"},
+                {x:10, w:Math.floor(Math.random()*900), label:"<?php echo($rankings[$employee_key[9]]) ?>", color: "#8C1C13"},
             ];
 
             var s = d3.select('body')
