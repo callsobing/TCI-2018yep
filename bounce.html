@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
+<meta http-equiv="refresh" content="5">
 <title>Pie Chart</title>
 <body>
-<script src="//d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/d3.v3.min.js"></script>
 <script>
 
     var width = 960,
@@ -30,7 +31,7 @@
         .enter().append("g")
         .attr("class", "arc");
 
-    arcs.append("path")
+    var path = arcs.append("path")
         .attr("fill", function(d, i) { return color(i); })
         .transition()
         .ease("bounce")
@@ -41,6 +42,17 @@
         .delay(function(d, i) { return 2000 + i * 50; })
         .duration(750)
         .attrTween("d", tweenDonut);
+
+    var point = path.node().getPointAtLength(path.node().getTotalLength() / 2);
+
+    var text = svg.append("text")
+      .attr("fill", "white")
+      .attr("x", point.x)
+      .attr("y", point.y)
+      .attr("text-anchor", "middle")
+      .attr("dominant-baseline", "central")
+      .attr("font-size", "8px")
+      .text(d3.format(".0%")(5 / (Math.PI * 2)));
 
     function tweenPie(b) {
         b.innerRadius = 0;
