@@ -91,7 +91,7 @@ while (!feof($file)) {
                 .duration(3000)
                 .attr({
                     'x':function(d){
-                        return d.w;
+                        return (((screenWidth - 80)/<?php echo($rankings[$employee_key[0]]); ?>) * d.w );
                     }
                 })
                 .tween('number',function(d){
