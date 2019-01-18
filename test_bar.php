@@ -25,6 +25,8 @@ while (!feof($file)) {
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script>
         window.addEventListener('load',function(){
+            var screenWidth = window.screen.width;
+            var screenHeight = window.screen.height;
 
             var data = [
                 {x:1, w:"<?php echo($rankings[$employee_key[0]]); ?>", label:"<?php echo($employee_key[0]); ?>", color: "#628395"},
@@ -42,8 +44,8 @@ while (!feof($file)) {
             var s = d3.select('body')
                 .append('svg')
                 .attr({
-                    'width': 200 ,
-                    'height':1500
+                    'width': screenWidth ,
+                    'height': screenHeight
                 });
 
             s.selectAll('rect')
@@ -55,10 +57,10 @@ while (!feof($file)) {
                         return d.color;
                     },
                     'width':0,
-                    'height':50,
+                    'height': screenHeight/11 - screenHeight/110,
                     'x':0,
                     'y':function(d){
-                        return (d.x-1) * 55;
+                        return (d.x-1) * screenHeight/11;
                     }
                 })
                 .transition(1000)
@@ -80,7 +82,7 @@ while (!feof($file)) {
                     'fill':'#000',
                     'x':3,
                     'y':function(d){
-                        return d.x * 55 - 22;
+                        return d.x * screenHeight/11 - screenHeight/22;
                     },
                     fontSize: 28
 
