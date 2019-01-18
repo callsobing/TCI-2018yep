@@ -87,7 +87,8 @@ Chart.controllers.doughnutLabels = Chart.controllers.doughnut.extend({
 						ctx.textAlign = "center";
 
             // Round percentage in a way that it always adds up to 100%
-						ctx.fillText(segmentLabel.toFixed(0) + "%", labelPos.x, labelPos.y);
+			// 			ctx.fillText(segmentLabel.toFixed(0) + "%", labelPos.x, labelPos.y);
+						ctx.fillText("", labelPos.x, labelPos.y);
 					}
       }
     });
