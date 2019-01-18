@@ -89,7 +89,7 @@ while (!feof($file)) {
                 .duration(10000)
                 .attr({
                     'x':function(d){
-                        return d.w + 3;
+                        return d.w;
                     }
                 })
                 .tween('number',function(d){
