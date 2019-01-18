@@ -2,21 +2,6 @@
 <!DOCTYPE html>
 <html lang="zh-Hans">
 
-<?php
-$employee_score_file = "data/employee_ranking.txt";
-$file = fopen($employee_score_file, "r");
-$employee_key = [];
-while (!feof($file)) {
-    $contents = fgets($file);
-    $items = preg_split('/\t/', $contents);
-    echo(utf8_decode($items[0]));
-    echo($items[1]);
-    $rankings += array($items[0] => floatval($items[1]));
-    array_push($employee_key, $items[0]);
-}
-
-?>
-
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Yian.Tung@TCI">
