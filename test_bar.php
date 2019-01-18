@@ -25,8 +25,12 @@ while (!feof($file)) {
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script>
         window.addEventListener('load',function(){
-            var screenWidth = window.screen.width;
-            var screenHeight = window.screen.height;
+            var w = window,
+                d = document,
+                e = d.documentElement,
+                g = d.getElementsByTagName('body')[0],
+                screenWidth = w.innerWidth || e.clientWidth || g.clientWidth,
+                screenHeight = w.innerHeight|| e.clientHeight|| g.clientHeight;
 
             var data = [
                 {x:1, w:"<?php echo($rankings[$employee_key[0]]); ?>", label:"<?php echo($employee_key[0]); ?>", color: "#628395"},
