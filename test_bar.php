@@ -7,7 +7,14 @@ $employee_score_file = "data/employee_ranking.txt";
 $file = fopen($employee_score_file, "r");
 $employee_key = [];
 while (!feof($file)) {
-    $items = preg_split('/\t/', utf8_encode(fgets($file)));
+    $contents = fgets($file);
+    $encoding = mb_detect_encoding($contents, array('ASCII','EUC-CN','BIG-5','UTF-8'));
+    if ($encoding != false) {
+        $contents = iconv($encoding, 'UTF-8', $contents);
+    } else {
+        $contents = mb_convert_encoding($contents, 'UTF-8','Unicode');
+    }
+    $items = preg_split('/\t/', $contents);
     echo($items[0]);
     $rankings += array($items[0] => floatval($items[1]));
     array_push($employee_key, $items[0]);
