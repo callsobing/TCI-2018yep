@@ -42,8 +42,8 @@ while (!feof($file)) {
             var s = d3.select('body')
                 .append('svg')
                 .attr({
-                    'width': 1000 ,
-                    'height':1000
+                    'width': "100%" ,
+                    'height': "100%"
                 });
 
             s.selectAll('rect')
@@ -61,8 +61,8 @@ while (!feof($file)) {
                         return (d.x-1) * 55;
                     }
                 })
-                .transition(3000)
-                .duration(10000)
+                .transition(1000)
+                .duration(3000)
                 .attr({
                     'width':function(d){
                         return d.w;
@@ -85,8 +85,8 @@ while (!feof($file)) {
                     fontSize: 28
 
                 })
-                .transition(3000)
-                .duration(10000)
+                .transition(1000)
+                .duration(3000)
                 .attr({
                     'x':function(d){
                         return d.w;
