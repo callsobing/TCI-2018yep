@@ -27,8 +27,8 @@ Chart.controllers.doughnutLabels = Chart.controllers.doughnut.extend({
         endAngle = opts.rotation, // non reset case handled later
         dataset = _this.getDataset(),
         circumference = reset && animationOpts.animateRotate ? 0 : arc.hidden ? 0 : _this.calculateCircumference(dataset.data[index]) * (opts.circumference / (2.0 * Math.PI)),
-        innerRadius = reset && animationOpts.animateScale ? 0 : _this.innerRadius,
-        outerRadius = reset && animationOpts.animateScale ? 0 : _this.outerRadius,
+        innerRadius = reset && animationOpts.animateScale ? 0 : _this.innerRadius + _this.innerRadius * 0.5,
+        outerRadius = reset && animationOpts.animateScale ? 0 : _this.outerRadius + _this.innerRadius * 0.5,
         custom = arc.custom || {},
         valueAtIndexOrDefault = helpers.getValueAtIndexOrDefault;
 
