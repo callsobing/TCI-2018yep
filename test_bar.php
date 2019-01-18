@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hans">
 
 <?php
 $employee_score_file = "data/employee_ranking.txt";
