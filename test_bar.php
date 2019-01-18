@@ -20,7 +20,6 @@ while (!feof($file)) {
     <meta charset="UTF-8">
     <meta name="author" content="Yian.Tung@TCI">
     <meta name="copyright" content="Yian.Tung@TCI">
-    <meta http-equiv="refresh" content="12">
     <title></title>
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script>
