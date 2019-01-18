@@ -67,8 +67,8 @@ while (!feof($file)) {
                         return (d.x-1) * screenHeight/11;
                     }
                 })
-                .transition(1000)
-                .duration(3000)
+                .transition(2500)
+                .duration(5000)
                 .attr({
                     'width':function(d){
                         return (((screenWidth - 100)/<?php echo($rankings[$employee_key[0]]); ?>) * d.w );
@@ -91,8 +91,8 @@ while (!feof($file)) {
                     fontSize: 28
 
                 })
-                .transition(1000)
-                .duration(3000)
+                .transition(2500)
+                .duration(5000)
                 .attr({
                     'x':function(d){
                         return (((screenWidth - 100)/<?php echo($rankings[$employee_key[0]]); ?>) * d.w );
