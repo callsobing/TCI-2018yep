@@ -25,9 +25,9 @@ for kv_pair in employee_score_dict_sorted:
     match = regex.search(kv_pair[0])
     cc = OpenCC('t2s')
     try:
-        output_fh.write("%s\t%s\n" % (cc.convert(match[1]).encode("utf-8").decode('utf-8'), kv_pair[1]))
+        output_fh.write("%s\t%s\n" % (cc.convert(match[1]).encode("utf-8"), kv_pair[1]))
         print("%s\t%s" % (cc.convert(match[1]), kv_pair[1]))
     except:
-        output_fh.write("%s\t%s\n" % (cc.convert(kv_pair[0]).encode("utf-8").decode('utf-8'), kv_pair[1]))
+        output_fh.write("%s\t%s\n" % (cc.convert(kv_pair[0]).encode("utf-8"), kv_pair[1]))
 
 output_fh.close()
