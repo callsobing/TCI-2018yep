@@ -40,7 +40,11 @@ while (!feof($file)) {
             ];
 
             var s = d3.select('body')
-                .append('svg');
+                .append('svg')
+                .attr({
+                    'width': 150 ,
+                    'height':150
+                });
 
             s.selectAll('rect')
                 .data(data)
