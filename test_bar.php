@@ -10,6 +10,7 @@ while (!feof($file)) {
     $contents = fgets($file);
     $items = preg_split('/\t/', $contents);
     echo($items[0]);
+    echo($items[1]);
     $rankings += array($items[0] => floatval($items[1]));
     array_push($employee_key, $items[0]);
 }
