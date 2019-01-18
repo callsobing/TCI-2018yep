@@ -117,42 +117,17 @@ var config = {
   type: 'doughnutLabels',
   data: {
     datasets: [{
-      data: [
-        1200,
-        1112,
-        533,
-        202,
-        105,
-      ],
-      backgroundColor: [
-        "#F7464A",
-        "#46BFBD",
-        "#FDB45C",
-        "#949FB1",
-        "#4D5360",
-      ],
+      data: [80, 20],
+      backgroundColor: ["#F7464A", "#949FB1"],
       label: 'Dataset 1'
-    }],
-    labels: [
-      "選項A",
-      "選項B",
-      "選項C",
-      "選項D",
-      "選項E"
-    ]
+    }]
   },
   options: {
     responsive: true,
-    legend: {
-      position: 'top',
-        labels: {
-            fontSize: 28
-        }
-    },
     title: {
       display: true,
-      text: '題目的標籤會放在這個地方',
-      fontSize: 32
+      text: 'DANCE-答題正確率',
+      fontSize: 24
     },
     animation: {
       animateScale: true,
