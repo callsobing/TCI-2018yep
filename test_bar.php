@@ -3,7 +3,7 @@
 <html lang="zh-Hans">
 
 <?php
-$employee_score_file = "data/top10_employee.txt";
+$employee_score_file = "data/output_top10_employee.txt";
 $file = fopen($employee_score_file, "r");
 $employee_key = [];
 $rankings =array();
