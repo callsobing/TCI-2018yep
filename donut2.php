@@ -180,7 +180,7 @@ $avg_score = floatval($items[2]);
         },
         options: {
             responsive: true,
-            aspectRatio: 1,
+            aspectRatio: 1.15,
             title: {
                 display: true,
                 text: "<?php echo($display_string); ?>",
@@ -195,7 +195,7 @@ $avg_score = floatval($items[2]);
                     text: '<?php echo($avg_score); ?>%',
                     color: '#000', //Default black
                     fontStyle: 'Helvetica', //Default Arial
-                    sidePadding: 0 //Default 20 (as a percentage)
+                    sidePadding: 15 //Default 20 (as a percentage)
                 }
             }
         }
