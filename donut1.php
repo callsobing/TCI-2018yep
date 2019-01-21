@@ -29,8 +29,8 @@ while (!feof($file)) {
 
     var helpers = Chart.helpers;
     var defaults = Chart.defaults;
-    var display_string = $display_string;
-    var avg_score = $avg_score;
+    var display_string = <?php echo($display_string) ?>;
+    var avg_score = <?php echo($avg_score) ?>;
 
     Chart.controllers.doughnutLabels = Chart.controllers.doughnut.extend({
         updateElement: function(arc, index, reset) {
