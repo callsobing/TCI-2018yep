@@ -184,6 +184,7 @@ while (!feof($file)) {
             title: {
                 display: true,
                 text: 'DANCE-答題正確率',
+                color: '#000000', //Default black
                 fontSize: 24
             },
             animation: {
