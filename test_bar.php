@@ -12,6 +12,8 @@ while (!feof($file)) {
     $items = preg_split('/\t/', $contents);
     $rankings[$items[0]] = floatval($items[1]);
     array_push($employee_key, $items[0]);
+    echo($items[1]);
+    echo($items[0]);
 }
 
 ?>
