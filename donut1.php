@@ -7,9 +7,9 @@ $avg_score = 0;
 while (!feof($file)) {
     $contents = fgets($file);
     $items = preg_split('/\t/', $contents);
-    $display_string = "(". $items[0] . "):" . mb_substr( $items[1],0,20,"utf-8");
-    echo($display_string);
+    $display_string = $items[0] . ":" . mb_substr( $items[1],0,10,"utf-8");
     $avg_score = floatval($items[2]);
+    echo($avg_score);
 }
 
 ?>
@@ -176,7 +176,7 @@ while (!feof($file)) {
         type: 'doughnutLabels',
         data: {
             datasets: [{
-                data: ['<?php echo($avg_score); ?>', '<?php echo(100 - $avg_score); ?>'],
+                data: [<?php echo($avg_score); ?>, <?php echo(100 - $avg_score); ?>],
                 backgroundColor: ["#ED553B", "#FFE100"],
                 label: 'Dataset 1'
             }]
