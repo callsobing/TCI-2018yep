@@ -77,7 +77,7 @@ for i in range(1, 11):
 
 top10_employee_fh = open("data/output_top10_employee.txt", "w", encoding="utf-8")
 for employee in top10_employee:
-    top10_employee_fh.write("%s\t%s\n" % (employee, str(top10_employee[employee])))
+    top10_employee_fh.write("%s\t%s\n" % (employee_id_mapping[employee], str(top10_employee[employee])))
 top10_employee_fh.close()
 
 
