@@ -9,7 +9,9 @@ while (!feof($file)) {
     $items = preg_split('/\t/', $contents);
     $display_string = $items[0] . ":" . mb_substr( $items[1],0,10,"utf-8");
     $avg_score = $items[2];
+    echo($display_string);
     echo($avg_score);
+    echo(100 - $avg_score);
 }
 
 ?>
