@@ -30,6 +30,8 @@ while (!feof($file)) {
 
     var helpers = Chart.helpers;
     var defaults = Chart.defaults;
+    var display_string = $display_string;
+    var avg_score = $avg_score;
 
     Chart.controllers.doughnutLabels = Chart.controllers.doughnut.extend({
         updateElement: function(arc, index, reset) {
@@ -178,7 +180,7 @@ while (!feof($file)) {
         type: 'doughnutLabels',
         data: {
             datasets: [{
-                data: [<?php echo($avg_score); ?>, <?php echo(100 - $avg_score); ?>],
+                data: [avg_score, 100 - avg_score],
                 backgroundColor: ["#ED553B", "#FFE100"],
                 label: 'Dataset 1'
             }]
@@ -188,7 +190,7 @@ while (!feof($file)) {
             aspectRatio: 1.55,
             title: {
                 display: true,
-                text: "<?php echo($display_string); ?>",
+                text: display_string,
                 fontSize: 24
             },
             animation: {
@@ -197,7 +199,7 @@ while (!feof($file)) {
             },
             elements: {
                 center: {
-                    text: '<?php echo($avg_score); ?>%',
+                    text: avg_score . '%',
                     color: '#423aeb', //Default black
                     fontStyle: 'Helvetica', //Default Arial
                     sidePadding: 15 //Default 20 (as a percentage)
