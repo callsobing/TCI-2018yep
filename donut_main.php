@@ -1,3 +1,16 @@
+<?php
+$employee_score_file = "data/output_total_avg.txt";
+$file = fopen($employee_score_file, "r");
+$employee_key = [];
+$rankings =array();
+$avg_score = 0;
+while (!feof($file)) {
+    $contents = fgets($file);
+    $avg_score = floatval($contents);
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -160,7 +173,7 @@
         type: 'doughnutLabels',
         data: {
             datasets: [{
-                data: [80, 20],
+                data: [<?php echo($avg_score); ?>, <?php echo(100 - $avg_score); ?>],
                 backgroundColor: ["#F7464A", "#949FB1"],
                 label: 'Dataset 1'
             }]
@@ -179,7 +192,7 @@
             },
             elements: {
                 center: {
-                    text: '80%',
+                    text: '<?php echo($avg_score); ?>%',
                     color: '#423aeb', //Default black
                     fontStyle: 'Helvetica', //Default Arial
                     sidePadding: 15 //Default 20 (as a percentage)
