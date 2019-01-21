@@ -16,20 +16,18 @@ while (!feof($file)) {
 
 ?>
 
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Yian.Tung@TCI">
     <meta name="copyright" content="Yian.Tung@TCI">
+    <meta http-equiv="refresh" content="12">
     <title></title>
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script>
         window.addEventListener('load',function(){
-            var w = window,
-                d = document,
-                e = d.documentElement,
-                g = d.getElementsByTagName('body')[0],
-                screenWidth = w.innerWidth || e.clientWidth || g.clientWidth,
-                screenHeight = w.innerHeight|| e.clientHeight|| g.clientHeight;
 
             var data = [
                 {x:1, w:"<?php echo($rankings[$employee_key[0]]); ?>", label:"<?php echo($employee_key[0]); ?>", color: "#628395"},
@@ -47,8 +45,8 @@ while (!feof($file)) {
             var s = d3.select('body')
                 .append('svg')
                 .attr({
-                    'width': screenWidth ,
-                    'height': screenHeight
+                    'width': 1000 ,
+                    'height':1000
                 });
 
             s.selectAll('rect')
@@ -60,17 +58,17 @@ while (!feof($file)) {
                         return d.color;
                     },
                     'width':0,
-                    'height': screenHeight/11 - screenHeight/110,
+                    'height':50,
                     'x':0,
                     'y':function(d){
-                        return (d.x-1) * screenHeight/11;
+                        return (d.x-1) * 55;
                     }
                 })
-                .transition(2500)
-                .duration(5000)
+                .transition(3000)
+                .duration(10000)
                 .attr({
                     'width':function(d){
-                        return (((screenWidth - 100)/<?php echo($rankings[$employee_key[0]]); ?>) * d.w );
+                        return d.w;
                     }
                 });
 
@@ -85,16 +83,16 @@ while (!feof($file)) {
                     'fill':'#000',
                     'x':3,
                     'y':function(d){
-                        return d.x * screenHeight/11 - screenHeight/22;
+                        return d.x * 55 - 22;
                     },
                     fontSize: 28
 
                 })
-                .transition(2500)
-                .duration(5000)
+                .transition(3000)
+                .duration(10000)
                 .attr({
                     'x':function(d){
-                        return (((screenWidth - 100)/<?php echo($rankings[$employee_key[0]]); ?>) * d.w );
+                        return d.w + 3;
                     }
                 })
                 .tween('number',function(d){
