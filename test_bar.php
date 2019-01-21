@@ -9,6 +9,7 @@ $employee_key = [];
 $rankings =array();
 while (!feof($file)) {
     $contents = fgets($file);
+    echo($contents);
     $items = preg_split('/\t/', $contents);
     echo($items[1]);
     echo($items[0]);
