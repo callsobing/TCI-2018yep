@@ -36,16 +36,16 @@ while (!feof($file)) {
                 screenHeight = w.innerHeight|| e.clientHeight|| g.clientHeight;
 
             var data = [
-                {x:1, w:"<?php echo($rankings[$employee_key[0]]); ?>", label:"<?php echo($employee_key[0]); ?>", color: "#628395"},
-                {x:2, w:"<?php echo($rankings[$employee_key[1]]); ?>", label:"<?php echo($employee_key[1]); ?>", color: "#96897B"},
-                {x:3, w:"<?php echo($rankings[$employee_key[2]]); ?>", label:"<?php echo($employee_key[2]); ?>", color: "#DBAD6A"},
-                {x:4, w:"<?php echo($rankings[$employee_key[3]]); ?>", label:"<?php echo($employee_key[3]); ?>", color: "#CF995F"},
-                {x:5, w:"<?php echo($rankings[$employee_key[4]]); ?>", label:"<?php echo($employee_key[4]); ?>", color: "#D0CE7C"},
-                {x:6, w:"<?php echo($rankings[$employee_key[5]]); ?>", label:"<?php echo($employee_key[5]); ?>", color: "#735751"},
-                {x:7, w:"<?php echo($rankings[$employee_key[6]]); ?>", label:"<?php echo($employee_key[6]); ?>", color: "#A78A7F"},
-                {x:8, w:"<?php echo($rankings[$employee_key[7]]); ?>", label:"<?php echo($employee_key[7]); ?>", color: "#E7D7C1"},
-                {x:9, w:"<?php echo($rankings[$employee_key[8]]); ?>", label:"<?php echo($employee_key[8]); ?>", color: "#BF4342"},
-                {x:10, w:"<?php echo($rankings[$employee_key[9]]); ?>", label:"<?php echo($employee_key[9]); ?>", color: "#8C1C13"},
+                {x:1, w:"<?php echo($rankings[$employee_key[0]]); ?>", label:"<?php echo($employee_key[0]); ?>", color: "#ED553B"},
+                {x:2, w:"<?php echo($rankings[$employee_key[1]]); ?>", label:"<?php echo($employee_key[1]); ?>", color: "#ED713B"},
+                {x:3, w:"<?php echo($rankings[$employee_key[2]]); ?>", label:"<?php echo($employee_key[2]); ?>", color: "#ED8A3B"},
+                {x:4, w:"<?php echo($rankings[$employee_key[3]]); ?>", label:"<?php echo($employee_key[3]); ?>", color: "#EDAC3B"},
+                {x:5, w:"<?php echo($rankings[$employee_key[4]]); ?>", label:"<?php echo($employee_key[4]); ?>", color: "#FFE100"},
+                {x:6, w:"<?php echo($rankings[$employee_key[5]]); ?>", label:"<?php echo($employee_key[5]); ?>", color: "#068587"},
+                {x:7, w:"<?php echo($rankings[$employee_key[6]]); ?>", label:"<?php echo($employee_key[6]); ?>", color: "#4FB99F"},
+                {x:8, w:"<?php echo($rankings[$employee_key[7]]); ?>", label:"<?php echo($employee_key[7]); ?>", color: "#4FCD9F"},
+                {x:9, w:"<?php echo($rankings[$employee_key[8]]); ?>", label:"<?php echo($employee_key[8]); ?>", color: "#4FDC9F"},
+                {x:10, w:"<?php echo($rankings[$employee_key[9]]); ?>", label:"<?php echo($employee_key[9]); ?>", color: "#4FFF9F"},
             ];
 
             var s = d3.select('body')
