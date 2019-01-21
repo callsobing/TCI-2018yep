@@ -8,11 +8,15 @@ for line in employee_group_fh:
     line = line.rstrip()
     splitted = line.split("\t")
     team = splitted[1] + "-" + splitted[0]
-    employee_id_mapping[splitted[4]] = splitted[2]
     if team not in group_employee:
         group_employee[team] = []
     group_employee[team].append(splitted[4])
 
+employee_group_fh = open("data/employ_id_mapping", encoding="utf-8")
+for line in employee_group_fh:
+    line = line.rstrip()
+    splitted = line.split("\t")
+    employee_id_mapping[splitted[1]] = splitted[0]
 
 customer_info = {}
 # 讀入試題統計
