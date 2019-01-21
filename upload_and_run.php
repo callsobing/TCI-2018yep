@@ -54,8 +54,8 @@ if($_FILES["test_stats"]["size"] > 0){
 }
 
 $command_inline = "sudo -u www-data python3.4 scripts/parse_data_to_result.py";
-$command = exec($command_inline);
-
+$command = exec($command_inline . ' 2>&1',$output);
+var_dump($output);
 ?>
 
 
