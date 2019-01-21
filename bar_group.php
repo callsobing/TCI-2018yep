@@ -3,14 +3,18 @@
 <html lang="zh-Hans">
 
 <?php
-$employee_score_file = "data/employee_ranking.txt";
+$employee_score_file = "data/output_top10_group.txt";
 $file = fopen($employee_score_file, "r");
 $employee_key = [];
 $rankings =array();
+$max_score = 0;
 while (!feof($file)) {
     $contents = fgets($file);
     $items = preg_split('/\t/', $contents);
     $rankings[$items[0]] = floatval($items[1]);
+    if(floatval($items[1]) > $max_score){
+        $max_score = floatval($items[1]);
+    }
     array_push($employee_key, $items[0]);
 }
 
@@ -70,7 +74,7 @@ while (!feof($file)) {
                 .duration(5000)
                 .attr({
                     'width':function(d){
-                        return (((screenWidth - 100)/<?php echo($rankings[$employee_key[0]]); ?>) * d.w );
+                        return (((screenWidth - 150)/<?php echo($max_score); ?>) * d.w );
                     }
                 });
 
@@ -87,14 +91,14 @@ while (!feof($file)) {
                     'y':function(d){
                         return d.x * screenHeight/11 - screenHeight/22;
                     },
-                    fontSize: 28
+                    fontSize: 22
 
                 })
                 .transition(2500)
                 .duration(5000)
                 .attr({
                     'x':function(d){
-                        return (((screenWidth - 100)/<?php echo($rankings[$employee_key[0]]); ?>) * d.w );
+                        return (((screenWidth - 150)/<?php echo($max_score); ?>) * d.w );
                     }
                 })
                 .tween('number',function(d){
