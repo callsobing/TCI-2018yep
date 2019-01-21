@@ -11,7 +11,6 @@ while (!feof($file)) {
     $avg_score = $items[2];
     echo($display_string);
     echo($avg_score);
-    echo(100 - $avg_score);
 }
 
 ?>
