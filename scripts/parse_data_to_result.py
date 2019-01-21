@@ -102,7 +102,7 @@ sorted_by_value = sorted(group_score.items(), key=lambda kv: kv[1], reverse=True
 count = 0
 for kv in sorted_by_value:
     if count < 10:
-        top10_group_fh.write("%s\t%s\n" % (kv[0], kv[1]))
+        top10_group_fh.write("%s\t%s\n" % (employee_id_mapping[kv[0]], kv[1]))
         count += 1
     continue
 top10_group_fh.close()
