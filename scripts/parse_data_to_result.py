@@ -2,10 +2,24 @@ import xlrd
 from opencc import OpenCC
 import re
 
+employee_id_mapping = {}
+group_employee = {}
+employee_group_fh = open("../data/第一講堂分組_0118.txt", encoding="utf-8")
+for line in employee_group_fh:
+    line = line.rstrip()
+    splitted = line.split("\t")
+    team = splitted[1] + "-" + splitted[0]
+    employee_id_mapping[splitted[4]] = splitted[2]
+    if team not in group_employee:
+        group_employee[team] = []
+    group_employee[team].append(splitted[4])
+
+
 customer_info = {}
 # 讀入試題統計
 # 题号	题目	应得分	实得分	正确率	满分人数	零分人数	部分得分人数
-wb = xlrd.open_workbook("../data/20181227考试测试_云课堂(试题统计)_Min.Yue_20190107161736 (1).xlsx", on_demand=True)
+# wb = xlrd.open_workbook("../data/20181227考试测试_云课堂(试题统计)_Min.Yue_20190107161736 (1).xlsx", on_demand=True)
+wb = xlrd.open_workbook("../data/test_stats.xlsx", on_demand=True)
 
 sheet = wb.sheet_by_name("Sheet0")
 nrows = sheet.nrows
@@ -22,20 +36,25 @@ for i in range(1, nrows):
 prob_score_pair_sorted = sorted(prob_score_pair.items(), key=lambda kv: kv[1])
 
 count = 0
+
 for pair in prob_score_pair_sorted:
-    if count < 10:
-        prob_title = sheet.cell_value(int(pair[0]), 1)
-        print("%.0f\t%s\t%s" % (float(pair[0]), prob_title, str(pair[1])))
+    if count < 6:
         count += 1
+        output_fh = open("../data/question%s.txt" % str(count), "w")
+        prob_title = sheet.cell_value(int(pair[0]), 1)
+        output_fh.write("%.0f\t%s\t%s\n" % (float(pair[0]), prob_title, str(pair[1])))
+        output_fh.close()
     continue
 
 total_avg = scored_points/full_score
-print("%.2f" % (total_avg * 100))
-
+total_avg_fh = open("../data/total_avg.txt", "w")
+total_avg_fh.write("%.2f" % (total_avg * 100))
+total_avg_fh.close()
 
 # 讀入考試結果
 # 排名	姓名	账号	手机号	部门	得分	是否通过	交卷时间	考试用时（分钟）
-wb = xlrd.open_workbook("../data/20181227考试测试_云课堂(考试结果)_Min.Yue_20190107161730 (1).xlsx", on_demand=True)
+# wb = xlrd.open_workbook("../data/20181227考试测试_云课堂(考试结果)_Min.Yue_20190107161730 (1).xlsx", on_demand=True)
+wb = xlrd.open_workbook("../data/test_result.xlsx", on_demand=True)
 
 sheet = wb.sheet_by_name("正考结果")
 top10_employee = {}
@@ -43,43 +62,43 @@ employee_score_dict = {}
 
 for i in range(1, sheet.nrows):
     row_data = sheet.row_values(i)
-    employee_name = row_data[1]
+    employee_name = row_data[2]
+    if row_data[5] == "":
+        row_data[5] = 0.0
     employee_score = float(row_data[5])
     employee_score_dict[employee_name] = employee_score
 
 for i in range(1, 11):
     row_data = sheet.row_values(i)
-    employee_name = row_data[1]
-    print(row_data[5])
+    employee_id = row_data[2]
+    if row_data[5] == "":
+        row_data[5] = 0.0
     employee_score = float(row_data[5])
-    top10_employee[employee_name] = employee_score
+    top10_employee[employee_id] = employee_score
 
+top10_employee_fh = open("../data/top10_employee.txt", "w")
 for employee in top10_employee:
-    print("%s\t%s" % (employee, str(top10_employee[employee])))
+    top10_employee_fh.write("%s\t%s\n" % (employee, str(top10_employee[employee])))
+top10_employee_fh.close()
 
-#
-# #讀入分組名單
-# group_fh = open("../data/第一講堂分組_0118.txt", encoding="utf-8")
-#
-# for data in group_fh:
-#     row_data = sheet.row_values(i)
-#     employee_name = row_data[1]
-#     employee_score = float(row_data[5])
-#     employee_score_dict[employee_name] = employee_score
-#
-#
-#
-# output_fh = open("../data/employee_ranking.txt", "w", encoding="UTF-8")
-# employee_score_dict_sorted = sorted(employee_score_dict.items(), key=lambda kv: kv[1], reverse=True)
-# for kv_pair in employee_score_dict_sorted:
-#     regex = re.compile(r"\((\S+)\)")
-#     match = regex.search(kv_pair[0])
-#     cc = OpenCC('t2s')
-#     try:
-#         output_fh.write("%s\t%s\n" % (cc.convert(match[1]), kv_pair[1]))
-#         print("%s\t%s" % (cc.convert(match[1]), kv_pair[1]))
-#     except:
-#         output_fh.write("%s\t%s\n" % (cc.convert(kv_pair[0]), kv_pair[1]))
-#
-# output_fh.close()
-#
+
+group_score = {}
+top10_group_fh = open("../data/top10_group.txt", "w")
+for group in group_employee:
+    group_sum = 0
+    count = 0
+    for employee in group_employee[group]:
+        if employee in employee_score_dict:
+            group_sum += employee_score_dict[employee]
+        count += 1
+    group_score[group] = group_sum / count
+
+sorted_by_value = sorted(group_score.items(), key=lambda kv: kv[1], reverse=True)
+
+count = 0
+for kv in sorted_by_value:
+    if count < 10:
+        top10_group_fh.write("%s\t%s\n" % (kv[0], kv[1]))
+        count += 1
+    continue
+top10_group_fh.close()
