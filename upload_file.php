@@ -72,10 +72,9 @@ if(isset($_GET['error'])){?>
         <div class="main-content">
             <div class="section__content section__content--p30">
                 <div class="container-fluid">
-                    <img src="images/file_upload.jpg"/>
                     <div class="card">
                         <div class="card-header">
-                            <strong>TCI Gene - 檔案上傳</strong>
+                            <strong>TCI One - 檔案上傳</strong>
                         </div>
                         <div class="card-body card-block">
                             <form id="file_form" name="file_form" action="upload_and_run.php" method="post" enctype="multipart/form-data" class="form-horizontal" onSubmit="return check_filed(this)">
@@ -102,7 +101,6 @@ if(isset($_GET['error'])){?>
                     <div class="row">
                         <div class="col-md-12">
                             <div class="copyright">
-                                <p>Copyright © 2018 Colorlib. All rights reserved. </p>
                                 <p>Template by <a href="https://colorlib.com">Colorlib</a>.</p>
                                 <p>Modified by Yian.Tung / TCI Gene.</p>
                             </div>
