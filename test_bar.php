@@ -91,7 +91,7 @@ while (!feof($file)) {
                     'y':function(d){
                         return d.x * screenHeight/11 - screenHeight/22;
                     },
-                    fontSize: 28
+                    fontSize: 22
 
                 })
                 .transition(2500)
