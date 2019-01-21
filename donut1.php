@@ -8,7 +8,7 @@ while (!feof($file)) {
     $contents = fgets($file);
     $items = preg_split('/\t/', $contents);
     $display_string = $items[0] . ":" . mb_substr( $items[1],0,10,"utf-8");
-    $avg_score = floatval($items[2]);
+    $avg_score = $items[2];
     echo($avg_score);
 }
 
@@ -186,7 +186,7 @@ while (!feof($file)) {
             aspectRatio: 1.55,
             title: {
                 display: true,
-                text: '<?php echo($display_string); ?>',
+                text: "<?php echo($display_string); ?>",
                 fontSize: 24
             },
             animation: {
