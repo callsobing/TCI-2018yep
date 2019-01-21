@@ -1,4 +1,3 @@
-组长	分组	组员	所属公司	通讯录MAPPING	通讯录MAPPING
 Ady.Yang	A1	陳心怡	大江	Aggie.Chen	Aggie.Chen
 Ady.Yang	A1	黃冠禎	S8	HuangGuanZhen	HuangGuanZhen
 Ady.Yang	A1	張睿邗	大江	Sophia.Chang	Sophia.Chang
