@@ -80,8 +80,9 @@ for i in range(1, 11):
     top10_employee[employee_id] = employee_score
 
 top10_employee_fh = open("data/output_top10_employee.txt", "w", encoding="utf-8")
-for employee in top10_employee:
-    top10_employee_fh.write("%s\t%s\n" % (employee_id_mapping[employee], str(top10_employee[employee])))
+sorted_by_value = sorted(top10_employee.items(), key=lambda kv: kv[1], reverse=True)
+for kv in sorted_by_value:
+    top10_employee_fh.write("%s\t%s\n" % (kv[0], str(kv[1])))
 top10_employee_fh.close()
 
 
