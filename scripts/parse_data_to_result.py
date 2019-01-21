@@ -3,20 +3,22 @@ import xlrd
 
 employee_id_mapping = {}
 group_employee = {}
-employee_group_fh = open("data/employee_groups_0118.txt", encoding="utf-8")
-for line in employee_group_fh:
-    line = line.rstrip()
-    splitted = line.split("\t")
-    team = splitted[1] + "-" + splitted[0]
-    if team not in group_employee:
-        group_employee[team] = []
-    group_employee[team].append(splitted[4])
 
 employee_group_fh = open("data/employ_id_mapping", encoding="utf-8")
 for line in employee_group_fh:
     line = line.rstrip()
     splitted = line.split("\t")
     employee_id_mapping[splitted[1]] = splitted[0]
+
+employee_group_fh = open("data/employee_groups_0118.txt", encoding="utf-8")
+for line in employee_group_fh:
+    line = line.rstrip()
+    splitted = line.split("\t")
+    team = splitted[1] + "-" + employee_id_mapping[splitted[0]]
+    if team not in group_employee:
+        group_employee[team] = []
+    group_employee[team].append(splitted[4])
+
 
 customer_info = {}
 # 讀入試題統計
@@ -102,7 +104,7 @@ sorted_by_value = sorted(group_score.items(), key=lambda kv: kv[1], reverse=True
 count = 0
 for kv in sorted_by_value:
     if count < 10:
-        top10_group_fh.write("%s\t%s\n" % (employee_id_mapping[kv[0]], kv[1]))
+        top10_group_fh.write("%s\t%s\n" % (kv[0], kv[1]))
         count += 1
     continue
 top10_group_fh.close()
