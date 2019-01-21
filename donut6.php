@@ -4,12 +4,10 @@ $file = fopen($employee_score_file, "r");
 $employee_key = [];
 $rankings =array();
 $avg_score = 0;
-while (!feof($file)) {
-    $contents = fgets($file);
-    $items = preg_split('/\t/', $contents);
-    $display_string = "(". $items[0] . "):" . mb_substr( $items[1],0,20,"utf-8");
-    $avg_score = floatval($items[2]);
-}
+$contents = fgets($file);
+$items = preg_split('/\t/', $contents);
+$display_string = $items[0] . ":" . mb_substr( $items[1],0,10,"utf-8");
+$avg_score = floatval($items[2]);
 
 ?>
 
@@ -185,7 +183,7 @@ while (!feof($file)) {
             aspectRatio: 1.55,
             title: {
                 display: true,
-                text: '<?php echo($display_string); ?>',
+                text: "<?php echo($display_string); ?>",
                 fontSize: 24
             },
             animation: {
@@ -195,7 +193,7 @@ while (!feof($file)) {
             elements: {
                 center: {
                     text: '<?php echo($avg_score); ?>%',
-                    color: '#423aeb', //Default black
+                    color: '#ED553B', //Default black
                     fontStyle: 'Helvetica', //Default Arial
                     sidePadding: 15 //Default 20 (as a percentage)
                 }

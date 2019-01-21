@@ -183,7 +183,7 @@ $avg_score = floatval($items[2]);
             aspectRatio: 1.55,
             title: {
                 display: true,
-                text: "tesst",
+                text: "<?php echo($display_string); ?>",
                 fontSize: 24
             },
             animation: {
@@ -193,7 +193,7 @@ $avg_score = floatval($items[2]);
             elements: {
                 center: {
                     text: '<?php echo($avg_score); ?>%',
-                    color: '#423aeb', //Default black
+                    color: '#ED553B', //Default black
                     fontStyle: 'Helvetica', //Default Arial
                     sidePadding: 15 //Default 20 (as a percentage)
                 }
