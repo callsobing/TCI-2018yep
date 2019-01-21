@@ -184,7 +184,7 @@ $avg_score = floatval($items[2]);
             title: {
                 display: true,
                 text: "<?php echo($display_string); ?>",
-                fontSize: 24
+                fontSize: 18
             },
             animation: {
                 animateScale: true,
