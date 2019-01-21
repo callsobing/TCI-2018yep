@@ -40,14 +40,14 @@ count = 0
 for pair in prob_score_pair_sorted:
     if count < 6:
         count += 1
-        output_fh = open("../data/question%s.txt" % str(count), "w")
+        output_fh = open("../data/output_question%s.txt" % str(count), "w")
         prob_title = sheet.cell_value(int(pair[0]), 1)
         output_fh.write("%.0f\t%s\t%s\n" % (float(pair[0]), prob_title, str(pair[1])))
         output_fh.close()
     continue
 
 total_avg = scored_points/full_score
-total_avg_fh = open("../data/total_avg.txt", "w")
+total_avg_fh = open("../data/output_total_avg.txt", "w")
 total_avg_fh.write("%.2f" % (total_avg * 100))
 total_avg_fh.close()
 
@@ -76,14 +76,14 @@ for i in range(1, 11):
     employee_score = float(row_data[5])
     top10_employee[employee_id] = employee_score
 
-top10_employee_fh = open("../data/top10_employee.txt", "w")
+top10_employee_fh = open("../data/output_top10_employee.txt", "w")
 for employee in top10_employee:
     top10_employee_fh.write("%s\t%s\n" % (employee, str(top10_employee[employee])))
 top10_employee_fh.close()
 
 
 group_score = {}
-top10_group_fh = open("../data/top10_group.txt", "w")
+top10_group_fh = open("../data/output_top10_group.txt", "w")
 for group in group_employee:
     group_sum = 0
     count = 0
