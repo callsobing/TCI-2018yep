@@ -1,30 +1,39 @@
 
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
 <?php
-$employee_score_file = "data/top10_employee.txt";
+$employee_score_file = "data/output_top10_employee.txt";
 $file = fopen($employee_score_file, "r");
 $employee_key = [];
 $rankings =array();
+$max_score = 0;
 while (!feof($file)) {
     $contents = fgets($file);
     $items = preg_split('/\t/', $contents);
     $rankings[$items[0]] = floatval($items[1]);
+    if(floatval($items[1]) > $max_score){
+        $max_score = floatval($items[1]);
+    }
     array_push($employee_key, $items[0]);
 }
 
 ?>
 
-<!DOCTYPE html>
-<html lang="zh-Hans">
-
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Yian.Tung@TCI">
     <meta name="copyright" content="Yian.Tung@TCI">
-    <meta http-equiv="refresh" content="12">
     <title></title>
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script>
         window.addEventListener('load',function(){
+            var w = window,
+                d = document,
+                e = d.documentElement,
+                g = d.getElementsByTagName('body')[0],
+                screenWidth = w.innerWidth || e.clientWidth || g.clientWidth,
+                screenHeight = w.innerHeight|| e.clientHeight|| g.clientHeight;
 
             var data = [
                 {x:1, w:"<?php echo($rankings[$employee_key[0]]); ?>", label:"<?php echo($employee_key[0]); ?>", color: "#628395"},
@@ -42,8 +51,8 @@ while (!feof($file)) {
             var s = d3.select('body')
                 .append('svg')
                 .attr({
-                    'width': 1000 ,
-                    'height':1000
+                    'width': screenWidth ,
+                    'height': screenHeight
                 });
 
             s.selectAll('rect')
@@ -55,17 +64,17 @@ while (!feof($file)) {
                         return d.color;
                     },
                     'width':0,
-                    'height':50,
+                    'height': screenHeight/11 - screenHeight/110,
                     'x':0,
                     'y':function(d){
-                        return (d.x-1) * 55;
+                        return (d.x-1) * screenHeight/11;
                     }
                 })
-                .transition(3000)
-                .duration(10000)
+                .transition(2500)
+                .duration(5000)
                 .attr({
                     'width':function(d){
-                        return d.w;
+                        return (((screenWidth - 150)/<?php echo($max_score); ?>) * d.w );
                     }
                 });
 
@@ -80,16 +89,16 @@ while (!feof($file)) {
                     'fill':'#000',
                     'x':3,
                     'y':function(d){
-                        return d.x * 55 - 22;
+                        return d.x * screenHeight/11 - screenHeight/22;
                     },
-                    fontSize: 28
+                    fontSize: 22
 
                 })
-                .transition(3000)
-                .duration(10000)
+                .transition(2500)
+                .duration(5000)
                 .attr({
                     'x':function(d){
-                        return d.w + 3;
+                        return (((screenWidth - 150)/<?php echo($max_score); ?>) * d.w );
                     }
                 })
                 .tween('number',function(d){
