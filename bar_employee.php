@@ -1,7 +1,4 @@
 
-<!DOCTYPE html>
-<html lang="zh-Hans">
-
 <?php
 $employee_score_file = "data/top10_employee.txt";
 $file = fopen($employee_score_file, "r");
