@@ -1,10 +1,9 @@
 import xlrd
-from opencc import OpenCC
-import re
+
 
 employee_id_mapping = {}
 group_employee = {}
-employee_group_fh = open("data/第一講堂分組_0118.txt", encoding="utf-8")
+employee_group_fh = open("data/employee_groups_0118.txt", encoding="utf-8")
 for line in employee_group_fh:
     line = line.rstrip()
     splitted = line.split("\t")
