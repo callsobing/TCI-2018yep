@@ -8,9 +8,7 @@ while (!feof($file)) {
     $contents = fgets($file);
     $items = preg_split('/\t/', $contents);
     $display_string = $items[0] . ":" . mb_substr( $items[1],0,10,"utf-8");
-    $avg_score = $items[2];
-    echo($display_string);
-    echo($avg_score);
+    $avg_score = floatval($items[2]);
 }
 
 ?>
@@ -29,8 +27,6 @@ while (!feof($file)) {
 
     var helpers = Chart.helpers;
     var defaults = Chart.defaults;
-    var display_string = <?php echo($display_string) ?>;
-    var avg_score = <?php echo($avg_score) ?>;
 
     Chart.controllers.doughnutLabels = Chart.controllers.doughnut.extend({
         updateElement: function(arc, index, reset) {
@@ -179,7 +175,7 @@ while (!feof($file)) {
         type: 'doughnutLabels',
         data: {
             datasets: [{
-                data: [avg_score, 100 - avg_score],
+                data: [<?php echo($avg_score); ?>, <?php echo(100 - $avg_score); ?>],
                 backgroundColor: ["#ED553B", "#FFE100"],
                 label: 'Dataset 1'
             }]
@@ -189,7 +185,7 @@ while (!feof($file)) {
             aspectRatio: 1.55,
             title: {
                 display: true,
-                text: display_string,
+                text: "tesst",
                 fontSize: 24
             },
             animation: {
@@ -198,7 +194,7 @@ while (!feof($file)) {
             },
             elements: {
                 center: {
-                    text: avg_score . '%',
+                    text: '<?php echo($avg_score); ?>%',
                     color: '#423aeb', //Default black
                     fontStyle: 'Helvetica', //Default Arial
                     sidePadding: 15 //Default 20 (as a percentage)
