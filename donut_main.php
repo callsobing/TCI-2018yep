@@ -193,7 +193,7 @@ while (!feof($file)) {
             elements: {
                 center: {
                     text: '<?php echo($avg_score); ?>%',
-                    color: '#423aeb', //Default black
+                    color: '#000000', //Default black
                     fontStyle: 'Helvetica', //Default Arial
                     sidePadding: 15 //Default 20 (as a percentage)
                 }
