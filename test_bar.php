@@ -10,9 +10,9 @@ $rankings =array();
 while (!feof($file)) {
     $contents = fgets($file);
     echo($contents);
-    $items = preg_split('/\t/', $contents);
-    echo($items[1]);
-    echo($items[0]);
+//    $items = preg_split('/\t/', $contents);
+//    echo($items[1]);
+//    echo($items[0]);
 //    $rankings[$items[0]] = floatval($items[1]);
 //    array_push($employee_key, $items[0]);
 }
