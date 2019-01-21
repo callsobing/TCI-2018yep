@@ -52,6 +52,10 @@ if($_FILES["test_stats"]["size"] > 0){
     echo "window.location.href='$url?error=blank_file'";
     echo "</script>";
 }
+
+$command_inline = "sudo -u www-data python3.4 scripts/parse_data_to_result.py";
+$command = exec($command_inline);
+
 ?>
 
 
