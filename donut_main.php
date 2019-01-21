@@ -174,7 +174,7 @@ while (!feof($file)) {
         data: {
             datasets: [{
                 data: [<?php echo($avg_score); ?>, <?php echo(100 - $avg_score); ?>],
-                backgroundColor: ["#F7464A", "#949FB1"],
+                backgroundColor: ["#ED553B", "#FFE100"],
                 label: 'Dataset 1'
             }]
         },

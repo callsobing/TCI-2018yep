@@ -1,3 +1,18 @@
+<?php
+$employee_score_file = "data/output_question5.txt";
+$file = fopen($employee_score_file, "r");
+$employee_key = [];
+$rankings =array();
+$avg_score = 0;
+while (!feof($file)) {
+    $contents = fgets($file);
+    $items = preg_split('/\t/', $contents);
+    $display_string = "(". $items[0] . "):" . mb_substr( $items[1],0,20,"utf-8");
+    $avg_score = floatval($items[2]);
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -160,18 +175,18 @@
         type: 'doughnutLabels',
         data: {
             datasets: [{
-                data: [80, 20],
-                backgroundColor: ["#F7464A", "#949FB1"],
+                data: [<?php echo($avg_score); ?>, <?php echo(100 - $avg_score); ?>],
+                backgroundColor: ["#ED553B", "#FFE100"],
                 label: 'Dataset 1'
             }]
         },
         options: {
             responsive: true,
-            aspectRatio: 1.25,
+            aspectRatio: 1.55,
             title: {
                 display: true,
-                text: 'DANCE-答題正確率',
-                fontSize: 20
+                text: '<?php echo($display_string); ?>',
+                fontSize: 24
             },
             animation: {
                 animateScale: true,
@@ -179,7 +194,7 @@
             },
             elements: {
                 center: {
-                    text: '80%',
+                    text: '<?php echo($avg_score); ?>%',
                     color: '#423aeb', //Default black
                     fontStyle: 'Helvetica', //Default Arial
                     sidePadding: 15 //Default 20 (as a percentage)
