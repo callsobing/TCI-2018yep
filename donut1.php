@@ -4,12 +4,10 @@ $file = fopen($employee_score_file, "r");
 $employee_key = [];
 $rankings =array();
 $avg_score = 0;
-while (!feof($file)) {
-    $contents = fgets($file);
-    $items = preg_split('/\t/', $contents);
-    $display_string = $items[0] . ":" . mb_substr( $items[1],0,10,"utf-8");
-    $avg_score = floatval($items[2]);
-}
+$contents = fgets($file);
+$items = preg_split('/\t/', $contents);
+$display_string = $items[0] . ":" . mb_substr( $items[1],0,10,"utf-8");
+$avg_score = floatval($items[2]);
 
 ?>
 
