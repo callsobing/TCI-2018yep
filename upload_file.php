@@ -80,14 +80,23 @@ if(isset($_GET['error'])){?>
                             <form id="file_form" name="file_form" action="upload_and_run.php" method="post" enctype="multipart/form-data" class="form-horizontal" onSubmit="return check_filed(this)">
                                 <div class="row form-group">
                                     <div class="col col-md-6">
-                                        考試結果: <input type="file" name="test_result" id="test_result" />
+                                        R1考試結果: <input type="file" name="test_result" id="test_result" />
                                     </div>
                                 </div>
                                 <div class="row form-group">
                                     <div class="col col-md-6">
-                                        試題統計: <input type="file" name="test_stats" id="test_stats" />
+                                        R1試題統計: <input type="file" name="test_stats" id="test_stats" />
                                     </div>
                                 </div>
+                                <div class="row form-group">
+                                    <div class="col col-md-6">
+                                        R2考試結果: <input type="file" name="test_result2" id="test_result2" />
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col col-md-6">
+                                        R2試題統計: <input type="file" name="test_stats2" id="test_stats2" />
+                                    </div>
                                 <div class="row form-group">
                                     <div class="col col-md-3">
                                         <button type="submit" name="submit" id="submit" class="btn btn-primary btn-sm">Submit</button>
@@ -101,7 +110,6 @@ if(isset($_GET['error'])){?>
                     <div class="row">
                         <div class="col-md-12">
                             <div class="copyright">
-                                <p>Template by <a href="https://colorlib.com">Colorlib</a>.</p>
                                 <p>Modified by Yian.Tung / TCI Gene.</p>
                             </div>
                         </div>
