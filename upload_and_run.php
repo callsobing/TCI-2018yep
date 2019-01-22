@@ -53,9 +53,57 @@ if($_FILES["test_stats"]["size"] > 0){
     echo "</script>";
 }
 
-$command_inline = "sudo -u www-data python3.4 scripts/parse_data_to_result.py";
-$command = exec($command_inline . ' 2>&1',$output);
-var_dump($output);
+if($_FILES["test_result2"]["size"] > 0){
+    if(!empty($_FILES["test_result2"]["tmp_name"])){
+        if (!file_exists($target_dir)) {
+            mkdir($target_dir, 0777, true);
+        }
+        $target_file = $target_dir."test_result.xlsx" ;
+        $file_size = ($_FILES["test_result2"]["size"] / 1024);
+
+        if (move_uploaded_file($_FILES['test_result2']['tmp_name'], $target_file)) {
+        } else {
+            echo "Possible file upload attack!\\\\n";
+        }
+        // End 如果有上傳檔案放到正確的地方
+    }
+} else {
+    $url = "file_management.php";
+    echo "<script type='text/javascript'>";
+    echo "window.location.href='$url?error=blank_file'";
+    echo "</script>";
+}
+
+if($_FILES["test_stats2"]["size"] > 0){
+    if(!empty($_FILES["test_stats2"]["tmp_name"])){
+        if (!file_exists($target_dir)) {
+            mkdir($target_dir, 0777, true);
+        }
+        $target_file = $target_dir."test_stats.xlsx" ;
+        $file_size = ($_FILES["test_stats2"]["size"] / 1024);
+
+        if (move_uploaded_file($_FILES['test_stats2']['tmp_name'], $target_file)) {
+        } else {
+            echo "Possible file upload attack!\\\\n";
+        }
+        // End 如果有上傳檔案放到正確的地方
+    }
+} else {
+    $url = "file_management.php";
+    echo "<script type='text/javascript'>";
+    echo "window.location.href='$url?error=blank_file'";
+    echo "</script>";
+}
+
+if($_FILES["test_stats2"]["size"] > 0 && $_FILES["test_result2"]["size"] > 0){
+    $command_inline = "sudo -u www-data python3.4 scripts/parse_data_to_result.py 2";
+    $command = exec($command_inline . ' 2>&1',$output);
+    var_dump($output);
+} else {
+    $command_inline = "sudo -u www-data python3.4 scripts/parse_data_to_result.py 1";
+    $command = exec($command_inline . ' 2>&1', $output);
+    var_dump($output);
+}
 ?>
 
 
