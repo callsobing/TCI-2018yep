@@ -58,7 +58,7 @@ if($_FILES["test_result2"]["size"] > 0){
         if (!file_exists($target_dir)) {
             mkdir($target_dir, 0777, true);
         }
-        $target_file = $target_dir."test_result.xlsx" ;
+        $target_file = $target_dir."test_result2.xlsx" ;
         $file_size = ($_FILES["test_result2"]["size"] / 1024);
 
         if (move_uploaded_file($_FILES['test_result2']['tmp_name'], $target_file)) {
@@ -74,7 +74,7 @@ if($_FILES["test_stats2"]["size"] > 0){
         if (!file_exists($target_dir)) {
             mkdir($target_dir, 0777, true);
         }
-        $target_file = $target_dir."test_stats.xlsx" ;
+        $target_file = $target_dir."test_stats2.xlsx" ;
         $file_size = ($_FILES["test_stats2"]["size"] / 1024);
 
         if (move_uploaded_file($_FILES['test_stats2']['tmp_name'], $target_file)) {
