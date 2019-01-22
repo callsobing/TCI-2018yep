@@ -98,8 +98,8 @@ while (!feof($file)) {
                 .duration(5000)
                 .attr({
                     'x':function(d){
-                        if((((screenWidth)/<?php echo($max_score); ?>) * d.w ) - 120 > 0) {
-                            return (((screenWidth) /<?php echo($max_score); ?>) * d.w) - 120;
+                        if((((screenWidth)/<?php echo($max_score); ?>) * d.w ) - 130 > 0) {
+                            return (((screenWidth) /<?php echo($max_score); ?>) * d.w) - 130;
                         }
                         return 0;
                     }
