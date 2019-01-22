@@ -181,12 +181,6 @@ while (!feof($file)) {
         options: {
             responsive: true,
             aspectRatio: 1.55,
-            title: {
-                display: true,
-                text: 'DANCE-答題正確率',
-                color: '#000000', //Default black
-                fontSize: 24
-            },
             animation: {
                 animateScale: true,
                 animateRotate: true
