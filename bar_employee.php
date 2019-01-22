@@ -74,7 +74,7 @@ while (!feof($file)) {
                 .duration(5000)
                 .attr({
                     'width':function(d){
-                        return (((screenWidth - 150)/<?php echo($max_score); ?>) * d.w );
+                        return (((screenWidth)/<?php echo($max_score); ?>) * d.w );
                     }
                 });
 
@@ -98,7 +98,10 @@ while (!feof($file)) {
                 .duration(5000)
                 .attr({
                     'x':function(d){
-                        return (((screenWidth - 150)/<?php echo($max_score); ?>) * d.w );
+                        if((((screenWidth)/<?php echo($max_score); ?>) * d.w ) - 150 > 0) {
+                            return (((screenWidth) /<?php echo($max_score); ?>) * d.w) - 150;
+                        }
+                        return 0;
                     }
                 })
                 .tween('number',function(d){
