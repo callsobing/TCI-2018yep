@@ -105,7 +105,7 @@ while (!feof($file)) {
                     }
                 })
                 .tween('number',function(d){
-                    var i = d3.interpolateNumber(0, d.w);
+                    var i = d3.interpolateNumber(0, d.w).toFixed(1);
                     return function(t) {
                         this.textContent = d.label.concat(": ").concat(i(t)).concat(" 分");
                     };
