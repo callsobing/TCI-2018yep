@@ -67,11 +67,6 @@ if($_FILES["test_result2"]["size"] > 0){
         }
         // End 如果有上傳檔案放到正確的地方
     }
-} else {
-    $url = "file_management.php";
-    echo "<script type='text/javascript'>";
-    echo "window.location.href='$url?error=blank_file'";
-    echo "</script>";
 }
 
 if($_FILES["test_stats2"]["size"] > 0){
@@ -88,11 +83,6 @@ if($_FILES["test_stats2"]["size"] > 0){
         }
         // End 如果有上傳檔案放到正確的地方
     }
-} else {
-    $url = "file_management.php";
-    echo "<script type='text/javascript'>";
-    echo "window.location.href='$url?error=blank_file'";
-    echo "</script>";
 }
 
 if($_FILES["test_stats2"]["size"] > 0 && $_FILES["test_result2"]["size"] > 0){
