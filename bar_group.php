@@ -29,7 +29,7 @@ while (!feof($file)) {
         #ruler {
             visibility: hidden;
             white-space: nowrap;
-            font-size: 24px;
+            font-size: 22px;
         }
     </style>
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
