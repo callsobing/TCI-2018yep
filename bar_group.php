@@ -97,9 +97,7 @@ while (!feof($file)) {
                 .transition(2500)
                 .duration(5000)
                 .attr({
-                    'x':function(d){
-                        return (((screenWidth - 150)/<?php echo($max_score); ?>) * d.w );
-                    }
+                    'x':3
                 })
                 .tween('number',function(d){
                     var i = d3.interpolateRound(0, d.w);
