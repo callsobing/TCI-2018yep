@@ -113,13 +113,9 @@ while (!feof($file)) {
                 .duration(5000)
                 .attr({
                     'x':function(d){
-                        var text = d.label.concat(": ").concat("  ").concat(" 分")
+                        var text = d.label.concat(": ").concat("  ").concat(" 分");
                         var len = text.visualLength();
-
-                        if(((((screenWidth - 150)/<?php echo($max_score); ?>) * d.w ) - len) > 0){
-                            return (((screenWidth - 150)/<?php echo($max_score); ?>) * d.w ) - len;
-                        }
-                        return 0;
+                        return (((screenWidth - 150)/<?php echo($max_score); ?>) * d.w ) - len;
                     }
                 })
                 .tween('number',function(d){
