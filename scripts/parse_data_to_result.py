@@ -127,9 +127,7 @@ last10_employee_fh = open("data/output_last10_employee.txt", "w", encoding="utf-
 sorted_by_value = sorted(top10_employee.items(), key=lambda kv: kv[1])
 count = 0
 for kv in sorted_by_value:
-    if count < 10:
-        count += 1
-        last10_employee_fh.write("%s\t%s\n" % (employee_id_mapping[kv[0]], str(kv[1])))
+    last10_employee_fh.write("%s\t%s\n" % (employee_id_mapping[kv[0]], str(kv[1])))
 last10_employee_fh.close()
 
 
