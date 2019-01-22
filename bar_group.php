@@ -25,7 +25,22 @@ while (!feof($file)) {
     <meta name="author" content="Yian.Tung@TCI">
     <meta name="copyright" content="Yian.Tung@TCI">
     <title></title>
+    <style>
+        #ruler {
+            visibility: hidden;
+            white-space: nowrap;
+            font-size: 24px;
+        }
+    </style>
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script>
+        String.prototype.visualLength = function()
+        {
+            var ruler = $("#ruler");
+            ruler.text(this);
+            return ruler[0].offsetWidth;
+        }
+    </script>
     <script>
         window.addEventListener('load',function(){
             var w = window,
@@ -97,7 +112,15 @@ while (!feof($file)) {
                 .transition(2500)
                 .duration(5000)
                 .attr({
-                    'x':3
+                    'x':function(d){
+                        var text = d.label.concat(": ").concat("  ").concat(" 分")
+                        var len = text.visualLength();
+
+                        if(((((screenWidth - 150)/<?php echo($max_score); ?>) * d.w ) - len) > 0){
+                            return (((screenWidth - 150)/<?php echo($max_score); ?>) * d.w ) - len;
+                        }
+                        return 0;
+                    }
                 })
                 .tween('number',function(d){
                     var i = d3.interpolateRound(0, d.w);
@@ -109,9 +132,11 @@ while (!feof($file)) {
         },false);
 
     </script>
+
 </head>
 
 <body>
+<span id="ruler">test</span>
 </body>
 
 </html>
