@@ -85,9 +85,14 @@ for i in range(1, sheet.nrows):
     if row_data[5] == "":
         row_data[5] = 0.0
     employee_score = float(row_data[5])
-    employee_score_dict[employee_name] = employee_score
-    employee_id = row_data[2]
-    top10_employee[employee_id] = employee_score
+    if employee_name not in employee_score_dict:
+        employee_score_dict[employee_name] = employee_score
+        employee_id = row_data[2]
+        top10_employee[employee_id] = employee_score
+    elif employee_score_dict[employee_name] < employee_score:
+        employee_score_dict[employee_name] = employee_score
+        employee_id = row_data[2]
+        top10_employee[employee_id] = employee_score
 
 
 top10_employee_total = {}
