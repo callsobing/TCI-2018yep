@@ -113,7 +113,7 @@ while (!feof($file)) {
                 .duration(5000)
                 .attr({
                     'x':function(d){
-                        return (((screenWidth - 150)/<?php echo($max_score); ?>) * d.w );
+                        return (((screenWidth - 150)/<?php echo($max_score); ?>) * d.w ) - 150;
                     }
                 })
                 .tween('number',function(d){
