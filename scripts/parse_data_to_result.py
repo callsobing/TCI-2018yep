@@ -86,15 +86,11 @@ for i in range(1, sheet.nrows):
         row_data[5] = 0.0
     employee_score = float(row_data[5])
     employee_score_dict[employee_name] = employee_score
-
-for i in range(1, 11):
-    row_data = sheet.row_values(i)
     employee_id = row_data[2]
-    if row_data[5] == "":
-        row_data[5] = 0.0
-    employee_score = float(row_data[5])
     top10_employee[employee_id] = employee_score
 
+
+top10_employee_total = {}
 if round == "2":
     wb = xlrd.open_workbook("data/test_result2.xlsx", on_demand=True)
 
@@ -106,23 +102,24 @@ if round == "2":
         if row_data[5] == "":
             row_data[5] = 0.0
         employee_score = float(row_data[5])
-        employee_score_dict[employee_name] = employee_score
-
-    for i in range(1, 11):
-        row_data = sheet.row_values(i)
+        if employee_name in employee_score_dict:
+            employee_score_dict[employee_name] = (employee_score_dict[employee_name] + employee_score) / 2
+        else:
+            employee_score_dict[employee_name] = employee_score / 2
         employee_id = row_data[2]
-        if row_data[5] == "":
-            row_data[5] = 0.0
-        employee_score = float(row_data[5])
         if employee_id in top10_employee:
             top10_employee[employee_id] = (top10_employee[employee_id] + employee_score) / 2
         else:
             top10_employee[employee_id] = employee_score / 2
 
+
 top10_employee_fh = open("data/output_top10_employee.txt", "w", encoding="utf-8")
 sorted_by_value = sorted(top10_employee.items(), key=lambda kv: kv[1], reverse=True)
+count = 0
 for kv in sorted_by_value:
-    top10_employee_fh.write("%s\t%s\n" % (employee_id_mapping[kv[0]], str(kv[1])))
+    if count < 10:
+        count += 1
+        top10_employee_fh.write("%s\t%s\n" % (employee_id_mapping[kv[0]], str(kv[1])))
 top10_employee_fh.close()
 
 
