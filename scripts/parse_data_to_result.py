@@ -153,3 +153,9 @@ for kv in sorted_by_value:
         count += 1
     continue
 top10_group_fh.close()
+
+last10_group_fh = open("data/output_last10_group.txt", "w", encoding="utf-8")
+sorted_by_value = sorted(group_score.items(), key=lambda kv: kv[1], reverse=True)
+for kv in sorted_by_value:
+    last10_group_fh.write("%s\t%s\n" % (kv[0], kv[1]))
+last10_group_fh.close()
