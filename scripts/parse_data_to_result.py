@@ -1,5 +1,7 @@
 import xlrd
+import sys
 
+round = sys.argv[1]
 
 employee_id_mapping = {}
 group_employee = {}
@@ -37,6 +39,18 @@ for i in range(1, nrows):
     full_score += float(row_data[2])
     scored_points += float(row_data[3])
     prob_score_pair[row_data[0]] = row_data[3]
+
+if round == "2":
+    wb = xlrd.open_workbook("data/test_stats2.xlsx", on_demand=True)
+
+    sheet = wb.sheet_by_name("Sheet0")
+    nrows = sheet.nrows
+
+    for i in range(1, nrows):
+        row_data = sheet.row_values(i)
+        full_score += float(row_data[2])
+        scored_points += float(row_data[3])
+        prob_score_pair[row_data[0]] = row_data[3]
 
 prob_score_pair_sorted = sorted(prob_score_pair.items(), key=lambda kv: kv[1])
 
@@ -80,6 +94,30 @@ for i in range(1, 11):
         row_data[5] = 0.0
     employee_score = float(row_data[5])
     top10_employee[employee_id] = employee_score
+
+if round == "2":
+    wb = xlrd.open_workbook("data/test_result2.xlsx", on_demand=True)
+
+    sheet = wb.sheet_by_name("正考结果")
+
+    for i in range(1, sheet.nrows):
+        row_data = sheet.row_values(i)
+        employee_name = row_data[2]
+        if row_data[5] == "":
+            row_data[5] = 0.0
+        employee_score = float(row_data[5])
+        employee_score_dict[employee_name] = employee_score
+
+    for i in range(1, 11):
+        row_data = sheet.row_values(i)
+        employee_id = row_data[2]
+        if row_data[5] == "":
+            row_data[5] = 0.0
+        employee_score = float(row_data[5])
+        if employee_id in top10_employee:
+            top10_employee[employee_id] = (top10_employee[employee_id] + employee_score) / 2
+        else:
+            top10_employee[employee_id] = employee_score / 2
 
 top10_employee_fh = open("data/output_top10_employee.txt", "w", encoding="utf-8")
 sorted_by_value = sorted(top10_employee.items(), key=lambda kv: kv[1], reverse=True)
