@@ -38,7 +38,7 @@ for i in range(1, nrows):
     row_data = sheet.row_values(i)
     full_score += float(row_data[2])
     scored_points += float(row_data[3])
-    prob_score_pair[row_data[0]] = row_data[3]
+    prob_score_pair[row_data[1]] = row_data[3]
 
 if round == "2":
     wb = xlrd.open_workbook("data/test_stats2.xlsx", on_demand=True)
@@ -50,7 +50,8 @@ if round == "2":
         row_data = sheet.row_values(i)
         full_score += float(row_data[2])
         scored_points += float(row_data[3])
-        prob_score_pair[row_data[0]] = row_data[3]
+        if row_data[1] in prob_score_pair:
+            prob_score_pair[row_data[1]] = row_data[3]
 
 prob_score_pair_sorted = sorted(prob_score_pair.items(), key=lambda kv: kv[1])
 
@@ -60,8 +61,7 @@ for pair in prob_score_pair_sorted:
     if count < 6:
         count += 1
         output_fh = open("data/output_question%s.txt" % str(count), "w", encoding="utf-8")
-        prob_title = sheet.cell_value(int(pair[0]), 1)
-        output_fh.write("%.0f\t%s\t%s\n" % (float(pair[0]), prob_title, str(pair[1])))
+        output_fh.write("%s\t%s\n" % (pair[0], str(pair[1])))
         output_fh.close()
     continue
 
