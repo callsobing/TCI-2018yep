@@ -112,10 +112,10 @@ while (!feof($file)) {
                 .transition(2500)
                 .duration(5000)
                 .attr({
-                    'x':function(d){
+                    'x': function(d){
                         var text = d.label.concat(": ").concat("  ").concat(" 分");
                         var len = text.visualLength();
-                        return (((screenWidth - 150)/<?php echo($max_score); ?>) * d.w ) - len;
+                        return (((screenWidth - 150)/<?php echo($max_score); ?>) * d.w );
                     }
                 })
                 .tween('number',function(d){
