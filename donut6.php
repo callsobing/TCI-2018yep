@@ -6,8 +6,8 @@ $rankings =array();
 $avg_score = 0;
 $contents = fgets($file);
 $items = preg_split('/\t/', $contents);
-$display_string = $items[0] . ":" . mb_substr( $items[1],0,10,"utf-8") . "...";
-$avg_score = floatval($items[2]);
+$display_string = mb_substr( $items[0],0,20,"utf-8") . "...";
+$avg_score = floatval($items[1]);
 
 ?>
 
