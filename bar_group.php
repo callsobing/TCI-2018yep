@@ -25,22 +25,7 @@ while (!feof($file)) {
     <meta name="author" content="Yian.Tung@TCI">
     <meta name="copyright" content="Yian.Tung@TCI">
     <title></title>
-    <style>
-        #ruler {
-            visibility: hidden;
-            white-space: nowrap;
-            font-size: 22px;
-        }
-    </style>
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-    <script>
-        String.prototype.visualLength = function()
-        {
-            var ruler = $("#ruler");
-            ruler.text(this);
-            return ruler[0].offsetWidth;
-        }
-    </script>
     <script>
         window.addEventListener('load',function(){
             var w = window,
@@ -133,7 +118,6 @@ while (!feof($file)) {
 </head>
 
 <body>
-<span id="ruler">test</span>
 </body>
 
 </html>
