@@ -276,7 +276,7 @@ Joy.Liu	E7	张露露	S8	Dave	Dave
 Joy.Liu	E7	杨松	生科	18687500930	18687500930
 Katze.Ho	F1	陳怡靜	生技	Mandy.Chen	Mandy.Chen
 Katze.Ho	F1	黃千恬	大江	Mandy.Huang	Mandy.Huang
-Katze.Ho	F1		#N/A	#N/A	#N/A
+Katze.Ho	F1	杨英镝	生科	18344705340	18344705340
 Katze.Ho	F1	吳季穎	生活	Ryan.Wu	Ryan.Wu
 Katze.Ho	F1	郭玠呈	大江	Mark.Kuo	Mark.Kuo
 Katze.Ho	F1	王继曼	S8	Mandy.Wang	Mandy.Wang
