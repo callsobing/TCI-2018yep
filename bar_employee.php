@@ -88,9 +88,6 @@ while (!feof($file)) {
                 .data(data)
                 .enter()
                 .append('text')
-                .text(function(d){
-                    return 0  ;
-                })
                 .attr({
                     'fill':function(d){
                         return d.fontcolor;
