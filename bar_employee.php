@@ -77,7 +77,7 @@ while (!feof($file)) {
                     }
                 })
                 .transition(2500)
-                .duration(5000)
+                .duration(6000)
                 .attr({
                     'width':function(d){
                         return (((screenWidth)/<?php echo($max_score); ?>) * d.w );
@@ -102,7 +102,8 @@ while (!feof($file)) {
                     fontSize: 22,
                 })
                 .transition(2500)
-                .duration(5000)
+                .duration(2500)
+                .delay(3500)
                 .attr({
                     'x':function(d){
                         if((((screenWidth)/<?php echo($max_score); ?>) * d.w ) - 170 > 0) {
