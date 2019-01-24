@@ -19,7 +19,7 @@ $avg_score = floatval($items[1]);
 </head>
 <body>
 <canvas id="myChart"></canvas>
-<script src="https://github.com/chartjs/Chart.js/releases/download/v2.7.3/Chart.bundle.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.js"></script>
 <script>
     Chart.defaults.doughnutLabels = Chart.helpers.clone(Chart.defaults.doughnut);
 
