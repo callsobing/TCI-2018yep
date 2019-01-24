@@ -42,16 +42,16 @@ while (!feof($file)) {
                 screenHeight = w.innerHeight|| e.clientHeight|| g.clientHeight;
 
             var data = [
-                {x:1, w:"<?php echo($rankings[$employee_key[0]]); ?>", label:"🏆<?php echo($employee_key[0]); ?>", color: "#ED553B"},
-                {x:2, w:"<?php echo($rankings[$employee_key[1]]); ?>", label:"②<?php echo($employee_key[1]); ?>", color: "#ED713B"},
-                {x:3, w:"<?php echo($rankings[$employee_key[2]]); ?>", label:"③<?php echo($employee_key[2]); ?>", color: "#ED8A3B"},
-                {x:4, w:"<?php echo($rankings[$employee_key[3]]); ?>", label:"④<?php echo($employee_key[3]); ?>", color: "#EDAC3B"},
-                {x:5, w:"<?php echo($rankings[$employee_key[4]]); ?>", label:"⑤<?php echo($employee_key[4]); ?>", color: "#FFE100"},
-                {x:6, w:"<?php echo($rankings[$employee_key[5]]); ?>", label:"⑥<?php echo($employee_key[5]); ?>", color: "#068587"},
-                {x:7, w:"<?php echo($rankings[$employee_key[6]]); ?>", label:"⑦<?php echo($employee_key[6]); ?>", color: "#4FB99F"},
-                {x:8, w:"<?php echo($rankings[$employee_key[7]]); ?>", label:"⑧<?php echo($employee_key[7]); ?>", color: "#4FCD9F"},
-                {x:9, w:"<?php echo($rankings[$employee_key[8]]); ?>", label:"⑨<?php echo($employee_key[8]); ?>", color: "#4FDC9F"},
-                {x:10, w:"<?php echo($rankings[$employee_key[9]]); ?>", label:"⑩<?php echo($employee_key[9]); ?>", color: "#4FFF9F"},
+                {x:1, w:"<?php echo($rankings[$employee_key[0]]); ?>", label:"🏆<?php echo($employee_key[0]); ?>", color: "#ED553B" ,fontcolor: "#FFF"},
+                {x:2, w:"<?php echo($rankings[$employee_key[1]]); ?>", label:"②<?php echo($employee_key[1]); ?>", color: "#ED713B"  ,fontcolor: "#FFF"},
+                {x:3, w:"<?php echo($rankings[$employee_key[2]]); ?>", label:"③<?php echo($employee_key[2]); ?>", color: "#ED8A3B"  ,fontcolor: "#FFF"},
+                {x:4, w:"<?php echo($rankings[$employee_key[3]]); ?>", label:"④<?php echo($employee_key[3]); ?>", color: "#EDAC3B"  ,fontcolor: "#000"},
+                {x:5, w:"<?php echo($rankings[$employee_key[4]]); ?>", label:"⑤<?php echo($employee_key[4]); ?>", color: "#FFE100"  ,fontcolor: "#000"},
+                {x:6, w:"<?php echo($rankings[$employee_key[5]]); ?>", label:"⑥<?php echo($employee_key[5]); ?>", color: "#068587"  ,fontcolor: "#FFF"},
+                {x:7, w:"<?php echo($rankings[$employee_key[6]]); ?>", label:"⑦<?php echo($employee_key[6]); ?>", color: "#4FB99F"  ,fontcolor: "#fff"},
+                {x:8, w:"<?php echo($rankings[$employee_key[7]]); ?>", label:"⑧<?php echo($employee_key[7]); ?>", color: "#4FCD9F"  ,fontcolor: "#000"},
+                {x:9, w:"<?php echo($rankings[$employee_key[8]]); ?>", label:"⑨<?php echo($employee_key[8]); ?>", color: "#4FDC9F"  ,fontcolor: "#000"},
+                {x:10, w:"<?php echo($rankings[$employee_key[9]]); ?>", label:"⑩<?php echo($employee_key[9]); ?>", color: "#4FFF9F" ,fontcolor: "#000"},
             ];
 
             var s = d3.select('body')
@@ -89,13 +89,13 @@ while (!feof($file)) {
                 .enter()
                 .append('text')
                 .attr({
-                    'fill':'#000',
+                    'fill':function(d){
+                        return d.fontcolor;
+                    },
                     'x':3,
                     'y':function(d){
                         return d.x * screenHeight/11 - screenHeight/22;
-                    },
-                    fontSize: 22
-
+                    }
                 })
                 .transition(2500)
                 .duration(4000)
