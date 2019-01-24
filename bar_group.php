@@ -26,6 +26,12 @@ while (!feof($file)) {
     <meta name="copyright" content="Yian.Tung@TCI">
     <title></title>
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <style>
+        text {
+            font-size: 18px;
+            font-weight: bolder;
+        }
+    </style>
     <script>
         window.addEventListener('load',function(){
             var w = window,

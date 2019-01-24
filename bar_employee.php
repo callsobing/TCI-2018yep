@@ -27,7 +27,7 @@ while (!feof($file)) {
     <title></title>
     <style>
         text {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: bolder;
         }
     </style>
@@ -105,8 +105,8 @@ while (!feof($file)) {
                 .duration(5000)
                 .attr({
                     'x':function(d){
-                        if((((screenWidth)/<?php echo($max_score); ?>) * d.w ) - 160 > 0) {
-                            return (((screenWidth) /<?php echo($max_score); ?>) * d.w) - 160;
+                        if((((screenWidth)/<?php echo($max_score); ?>) * d.w ) - 170 > 0) {
+                            return (((screenWidth) /<?php echo($max_score); ?>) * d.w) - 170;
                         }
                         return 0;
                     }
