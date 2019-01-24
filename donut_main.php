@@ -183,7 +183,8 @@ while (!feof($file)) {
             aspectRatio: 1,
             animation: {
                 animateScale: true,
-                animateRotate: true
+                animateRotate: true,
+                animationEasing : "easeOutBounce"
             },
             elements: {
                 center: {
