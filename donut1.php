@@ -188,7 +188,9 @@ $avg_score = floatval($items[1]);
             },
             animation: {
                 animateScale: true,
-                animateRotate: true
+                animateRotate: true,
+                duration: 7500,
+                easing : "easeOutBounce"
             },
             elements: {
                 center: {
