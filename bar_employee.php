@@ -25,6 +25,11 @@ while (!feof($file)) {
     <meta name="author" content="Yian.Tung@TCI">
     <meta name="copyright" content="Yian.Tung@TCI">
     <title></title>
+    <style>
+        text {
+            font-size: 40px
+        }
+    </style>
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script>
         window.addEventListener('load',function(){
