@@ -101,7 +101,7 @@ while (!feof($file)) {
                 .transition(2500)
                 .duration(4000)
                 .delay({
-                    'x':function(d){
+                    function(d){
                         return 3500 - (d.x * 300);
                     }
                 })
