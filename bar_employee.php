@@ -99,7 +99,7 @@ while (!feof($file)) {
                     fontSize: 22,
                 })
                 .transition(2500)
-                .duration(2500)
+                .duration(4000)
                 .delay(3500)
                 .attr({
                     'x':function(d){
