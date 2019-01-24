@@ -180,7 +180,7 @@ $avg_score = floatval($items[1]);
         },
         options: {
             responsive: true,
-            aspectRatio: 0.8,
+            aspectRatio: 0.6,
             title: {
                 display: true,
                 text: "<?php echo($display_string); ?>",
