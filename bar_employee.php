@@ -94,7 +94,7 @@ while (!feof($file)) {
                         return d.x * screenHeight/11 - screenHeight/22;
                     },
                     fontSize: 22,
-                    fontWeight: "bolder"
+                    fontWeight: "bold"
 
                 })
                 .transition(2500)
