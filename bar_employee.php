@@ -27,7 +27,7 @@ while (!feof($file)) {
     <title></title>
     <style>
         text {
-            font-size: 18px;
+            font-size: 14px;
             font-weight: bolder;
         }
     </style>

@@ -28,7 +28,7 @@ while (!feof($file)) {
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <style>
         text {
-            font-size: 18px;
+            font-size: 14px;
             font-weight: bolder;
         }
     </style>
