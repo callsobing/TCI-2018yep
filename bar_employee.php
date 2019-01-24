@@ -86,7 +86,9 @@ while (!feof($file)) {
                     return 0  ;
                 })
                 .attr({
-                    'fill':'#000',
+                    'fill':function(d){
+                        return d.color;
+                    },
                     'x':3,
                     'y':function(d){
                         return d.x * screenHeight/11 - screenHeight/22;
