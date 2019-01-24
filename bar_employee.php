@@ -27,7 +27,7 @@ while (!feof($file)) {
     <title></title>
     <style>
         text {
-            font-size: 40px
+            font-size: 30px
         }
     </style>
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
