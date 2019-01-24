@@ -100,11 +100,7 @@ while (!feof($file)) {
                 })
                 .transition(2500)
                 .duration(4000)
-                .delay({
-                    function(d){
-                        return 3500 - (d.x * 300);
-                    }
-                })
+                .delay(function(d){return 3500 - (d.x * 300);})
                 .attr({
                     'x':function(d){
                         if((((screenWidth)/<?php echo($max_score); ?>) * d.w ) - 165 > 0) {
