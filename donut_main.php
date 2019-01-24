@@ -184,7 +184,7 @@ while (!feof($file)) {
             animation: {
                 animateScale: true,
                 animateRotate: true,
-                duration: 10000,
+                duration: 7500,
                 easing : "easeOutBounce"
             },
             elements: {
