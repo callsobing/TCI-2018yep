@@ -180,7 +180,7 @@ while (!feof($file)) {
         },
         options: {
             responsive: true,
-            aspectRatio: 1.55,
+            aspectRatio: 2,
             animation: {
                 animateScale: true,
                 animateRotate: true
