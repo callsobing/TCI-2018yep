@@ -77,7 +77,7 @@ while (!feof($file)) {
                     }
                 })
                 .transition(2500)
-                .duration(5000)
+                .duration(6000)
                 .attr({
                     'width':function(d){
                         return (((screenWidth)/<?php echo($max_score); ?>) * d.w );
@@ -88,9 +88,6 @@ while (!feof($file)) {
                 .data(data)
                 .enter()
                 .append('text')
-                .text(function(d){
-                    return 0  ;
-                })
                 .attr({
                     'fill':'#000',
                     'x':3,
@@ -101,7 +98,8 @@ while (!feof($file)) {
 
                 })
                 .transition(2500)
-                .duration(5000)
+                .duration(4000)
+                .delay(3500)
                 .attr({
                     'x':function(d){
                         if((((screenWidth)/<?php echo($max_score); ?>) * d.w ) - 165 > 0) {
