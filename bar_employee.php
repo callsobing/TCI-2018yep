@@ -103,8 +103,8 @@ while (!feof($file)) {
                 .delay(function(d){return 3500 - (d.x * 300);})
                 .attr({
                     'x':function(d){
-                        if((((screenWidth)/<?php echo($max_score); ?>) * d.w ) - 165 > 0) {
-                            return (((screenWidth) /<?php echo($max_score); ?>) * d.w) - 165;
+                        if((((screenWidth)/<?php echo($max_score); ?>) * d.w ) - 130 > 0) {
+                            return (((screenWidth) /<?php echo($max_score); ?>) * d.w) - 130;
                         }
                         return 0;
                     }
