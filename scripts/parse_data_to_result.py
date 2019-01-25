@@ -153,6 +153,14 @@ for group in group_employee:
         count += 1
     group_score[group] = group_sum / count
 
+group_score["A5-林鋅江"] += 5
+group_score["A6-林秀薇"] += 1
+group_score["B5-王文昭"] += 5
+group_score["E1-張雅婷"] += 1
+group_score["C3-鄧蓓"] += 2
+group_score["F6-汪興一"] += 3
+group_score["D3-王金良"] += 1
+group_score["C6-劉珊珊"] += 10
 sorted_by_value = sorted(group_score.items(), key=lambda kv: kv[1], reverse=True)
 
 count = 0
