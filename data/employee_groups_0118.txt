@@ -99,7 +99,6 @@ george.chen	B2	易浩	S8	Hao	Hao
 george.chen	B2	陳信良	農科	george.chen	george.chen
 george.chen	B2	吴智明	生科	garfield	garfield
 Grace.Fu	B3	倪潔莉	生科	ilyn	ilyn
-Grace.Fu	B3	邱唯恒	大江	Leon.Chiu	Leon.Chiu
 Grace.Fu	B3	饶攀	生科	Joy.Rao	Joy.Rao
 Grace.Fu	B3	張欣怡	大江	Jacqueline.Teoh	Jacqueline.Teoh
 Grace.Fu	B3	王筱玲	農科	Irene.Wang	Irene.Wang
