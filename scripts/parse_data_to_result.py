@@ -123,6 +123,8 @@ top10_employee_fh = open("data/output_top10_employee.txt", "w", encoding="utf-8"
 sorted_by_value = sorted(top10_employee.items(), key=lambda kv: kv[1], reverse=True)
 count = 0
 for kv in sorted_by_value:
+    if kv[0] not in employee_id_mapping:
+        continue
     if count < 10:
         count += 1
         top10_employee_fh.write("%s\t%s\n" % (employee_id_mapping[kv[0]], str(kv[1])))
