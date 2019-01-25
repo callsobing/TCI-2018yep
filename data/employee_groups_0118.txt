@@ -1,3 +1,6 @@
+Joy.Liu	E7	劉琰	#N/A	Joy.Liu	Joy.Liu
+Lynn.Hsu	D1	郭乙芑	美國	Anne.Kuo	Anne.Kuo
+Johnson.Chi	E6	邱晓艳	S8	LiLy.Qiu	LiLy.Qiu
 Ady.Yang	A1	陳心怡	大江	Aggie.Chen	Aggie.Chen
 Ady.Yang	A1	黃冠禎	S8	HuangGuanZhen	HuangGuanZhen
 Ady.Yang	A1	張睿邗	大江	Sophia.Chang	Sophia.Chang
@@ -11,7 +14,6 @@ Ady.Yang	A1	郭治宇	生技	18321783105	18321783105
 Alice.Chiang	A2	陆命命	S8	AMY.LU	AMY.LU
 Alice.Chiang	A2	何浩瑋	農科	Al.He@tci-bio.com	Al.He@tci-bio.com
 Alice.Chiang	A2	翁忠弘	#N/A	Troy.Weng	Troy.Weng
-Alice.Chiang	A2	宋玉春	大江	Haru.Sung	Haru.Sung
 Alice.Chiang	A2	卫晓红	S7	Anna.Wei	Anna.Wei
 Alice.Chiang	A2	林羿岑	大江	Angela.Lin	Angela.Lin
 Alice.Chiang	A2	龔建安	農科	Andrew.Kung	Andrew.Kung
@@ -71,9 +73,7 @@ Ella.Meng	A8	李昊	S7	18621676179	18621676179
 Erik.Hsu	A9	蔡玉熏	大江	Ellen.Tsai	Ellen.Tsai
 Erik.Hsu	A9	黃成達	大江	Edward.Huang	Edward.Huang
 Erik.Hsu	A9	沈利紜	S8	Ellen.Shen	Ellen.Shen
-Erik.Hsu	A9	李巧鈴	大江	elsalee	elsalee
 Erik.Hsu	A9	王洋	S8	Tina.Wang	Tina.Wang
-Erik.Hsu	A9	李思翰	大江	Henry.Lee	Henry.Lee
 Erik.Hsu	A9	許志邑	大江	Erik.Hsu	Erik.Hsu
 Erik.Hsu	A9	邢燕娟	生科	emily.xing	emily.xing
 Erik.Hsu	A9	邰莉雅	生技	Daria.Zhuravleva	Daria.Zhuravleva
@@ -83,7 +83,7 @@ Evelyn.Chung	B1	林慧雯	大江	Willa.Lin	Willa.Lin
 Evelyn.Chung	B1	杨娜	S8	na	na
 Evelyn.Chung	B1	謝孟涓	農科	Irene.Xie	Irene.Xie
 Evelyn.Chung	B1	鍾佳蓉	大江	Evelyn.Chung	Evelyn.Chung
-Evelyn.Chung	B1	余逸凡	大江	Eva.Yu	Eva.Yu
+Evelyn.Chung	B1	余逸凡	大江	Eva.Yu	#N/A
 Evelyn.Chung	B1	李宜樺	農科	Eva.Lee	Eva.Lee
 Evelyn.Chung	B1	潮梦凌	生科	Emma.Chao	Emma.Chao
 Evelyn.Chung	B1	王义文	生科	17721372077	17721372077
@@ -91,7 +91,7 @@ Evelyn.Chung	B1	王柯树	生科	17628012302	17628012302
 george.chen	B2	江政憲	大江	Frank.Chiang	Frank.Chiang
 george.chen	B2	溫證皓	大江	Frederic.Wen	Frederic.Wen
 george.chen	B2	許智慧	大江	hailey.koh@tci-bio.com	hailey.koh@tci-bio.com
-george.chen	B2	黃琡涵	大江	Hannah.Huang	Hannah.Huang
+george.chen	B2	黃琡涵	大江	Hannah.Huang	#N/A
 george.chen	B2	黃騰緯	大江	hannes.huang@tci-bio.com	hannes.huang@tci-bio.com
 george.chen	B2	楊宗翰	大江	Hans.Yang	Hans.Yang
 george.chen	B2	陳宣伊	大江	Jalynn.Chen	Jalynn.Chen
@@ -108,7 +108,7 @@ Grace.Fu	B3	张辉	S8	hui	hui
 Grace.Fu	B3	林浩平	大江	Howard.Lin	Howard.Lin
 Grace.Fu	B3	陈红敏	S8	hongmin	hongmin
 Grace.Fu	B3	傅珍珍	大江	Grace.Fu	Grace.Fu
-gracewang	B5	陳鴻霖	大江	Jack.Chen	Jack.Chen
+gracewang	B5	陳鴻霖	大江	Jack.Chen	#N/A
 gracewang	B5	李伙努	S8	15900805426	15900805426
 gracewang	B5	姚亮杰	生技	JAY.YAO	JAY.YAO
 gracewang	B5	高振壹	大江	Jae.Kao	Jae.Kao
@@ -132,8 +132,6 @@ HuangWeiXin	C2	陳佳佳	大江	Thachawan.C	Thachawan.C
 HuangWeiXin	C2	張惠淳	大江	Tiffany.Chang	Tiffany.Chang
 HuangWeiXin	C2	唐閎陞	S8	Tim.Tong	Tim.Tong
 HuangWeiXin	C2	蔣秀明	大江	Tina.Chiang	Tina.Chiang
-HuangWeiXin	C2	王颖超	生技	已离职	已离职
-HuangWeiXin	C2	王儷穎	大江	Tiffany.Wang	Tiffany.Wang
 HuangWeiXin	C2	盛永军	S8	THOMAS.SHENG	THOMAS.SHENG
 HuangWeiXin	C2	肖书倩	S7	SUSIE	SUSIE
 HuangWeiXin	C2	黃唯欣	農科	HuangWeiXin	HuangWeiXin
@@ -150,7 +148,6 @@ Wendy.Tang	C3	吳浩東	基因	Andrew.Wu@tci-bio.com	Andrew.Wu@tci-bio.com
 Molly.Sun	C5	孫偉	国贸	Molly.Sun	Molly.Sun
 Molly.Sun	C5	梁文静	S8	13761221917	13761221917
 Molly.Sun	C5	莫文娟	S8	wenjuan	wenjuan
-Molly.Sun	C5	陳玟玲	大江	Wenling.Chen@tci-bio.com	Wenling.Chen@tci-bio.com
 Molly.Sun	C5	翟伟	S8	wei	wei
 Molly.Sun	C5	卓雨薇	大江	Vivien.Cho	Vivien.Cho
 Molly.Sun	C5	罗薇	S7	15801870545	15801870545
@@ -161,12 +158,11 @@ Sandy.Liu	C6	王兴杰	S8	18855769775	18855769775
 Sandy.Liu	C6	赵艳	S8	17317650918	17317650918
 Sandy.Liu	C6	郑玉兰	S8	YOLANDA.ZHENG	YOLANDA.ZHENG
 Sandy.Liu	C6	黃婷	大江	Christy.Huang	Christy.Huang
-Sandy.Liu	C6	童翊安	大江	Yian.Tung	Yian.Tung
+Sandy.Liu	C6	童翊安	大江	Yian.Tung	#N/A
 Sandy.Liu	C6	陳世褆	美膚	XAVIER.CHEN	XAVIER.CHEN
 Sandy.Liu	C6	张小莉	S8	13774253519	13774253519
 Sandy.Liu	C6	姜奕豪	S8	0958083760	0958083760
 Jeffrey.Wu	C7	吳瑞益	大江	Jeffrey.Wu	Jeffrey.Wu
-Jeffrey.Wu	C7	張少均	生科	Bert.Chang	Bert.Chang
 Jeffrey.Wu	C7	陳鈺琪	S8	Yukii.Chen	Yukii.Chen
 Jeffrey.Wu	C7	劉蕙瑄	農科	Zita.Liu	Zita.Liu
 Jeffrey.Wu	C7	蒋中花	S8	zhonghua	zhonghua
@@ -183,12 +179,10 @@ Lynn.Hsu	D1	李然收	S8	Ranshou	Ranshou
 Lynn.Hsu	D1	彭佩佩	生科	Purpose.Peng	Purpose.Peng
 Lynn.Hsu	D1	徐佳伶	大江	Lynn.Hsu	Lynn.Hsu
 Lynn.Hsu	D1	王佩雯	基因	Bei.Wang	Bei.Wang
-Lynn.Hsu	D1	郭乙芑	美國	Anne.Kuo	Anne.Kuo
 Newman.Xue	D2	薛勝英	生科	Newman.Xue	Newman.Xue
 Newman.Xue	D2	李東維	大江	LiDongYiremi	LiDongYiremi
 Newman.Xue	D2	東峻平	大江	Ricky.Tung	Ricky.Tung
 Newman.Xue	D2	朱一華	生科	Robert.Zhu	Robert.Zhu
-Newman.Xue	D2	王宏福	大江	Vincent.Wang	Vincent.Wang
 Newman.Xue	D2	周君妹	S7	Rose.Zhou	Rose.Zhou
 Newman.Xue	D2	王隽	生科	Roger.Wang	Roger.Wang
 Newman.Xue	D2	杨柯楠	生科	Rocky.Yang	Rocky.Yang
@@ -212,9 +206,8 @@ Roy.Chang	D5	王帅卡	S8	Shuaika	Shuaika
 Roy.Chang	D5	張竣翔	大江	Roy.Chang	Roy.Chang
 Roy.Chang	D5	劉復誠	基因	Nick.Liu	Nick.Liu
 Roy.Chang	D5	吴明	S8	Jack	Jack
-Roy.Chang	D5	林德全	大江	Alston.Lin	Alston.Lin
 Roy.Chang	D5	曲岩	生科	13337636233	13337636233
-ingridchang	E1	張雅婷	農科	ingridchang	ingridchang
+ingridchang	E1	張雅婷	農科	ingridchang	ingridchang	Dave.Zhang(张露露)
 ingridchang	E1	邱詠詮	S8	QiuYongQuan	QiuYongQuan
 ingridchang	E1	呂杰修	大江	jay	jay
 ingridchang	E1	陳威仁	大江	Kerwin.Chen	Kerwin.Chen
@@ -223,7 +216,7 @@ ingridchang	E1	卢静	生科	Jenny.Lu	Jenny.Lu
 ingridchang	E1	鲁征成	S8	jay.lu	jay.lu
 ingridchang	E1	韩宏宇	生科	HanHongYu	HanHongYu
 ingridchang	E1	姚静怡	生技	15821875040	15821875040
-ingridchang	E1	吴刘烨	生技	13450221211	13450221211
+ingridchang	E1	吴刘烨	生技	13450221211	#N/A
 jackchiu	E2	李佳軒	大江	Jessie.Lee	Jessie.Lee
 jackchiu	E2	黃正謀	大江	Jim.Huang	Jim.Huang
 jackchiu	E2	王玲	S8	LING.WANG	LING.WANG
@@ -232,22 +225,22 @@ jackchiu	E2	陳琬真	農科	Joan.Chen	Joan.Chen
 jackchiu	E2	柳继东	S8	Jidong	Jidong
 jackchiu	E2	郭健忠	S8	JESTER.KUO	JESTER.KUO
 jackchiu	E2	朱静悦	生科	Jesmy.Zhu	Jesmy.Zhu
-jackchiu	E2	邱琮傑	大江	jackchiu	jackchiu
+jackchiu	E2	邱琮傑	大江	jackchiu	jackchiu	Livia.Tang(湯宜璇)
 jackchiu	E2	林苑	生技	18817836326	18817836326
 jason.xiao	E3	李喻嶸	生科	Joyce.Li	Joyce.Li
 jason.xiao	E3	黃若瑜	大江	Joyu.Huang	Joyu.Huang
 jason.xiao	E3	冮丽娜	生科	Maggie.Gang	Maggie.Gang
 jason.xiao	E3	唐毅恆	農科	ken.tong	ken.tong
-jason.xiao	E3	鍾雨縈	美國	Kayla.Chung	Kayla.Chung
+jason.xiao	E3	鍾雨縈	美國	Kayla.Chung	#N/A
 jason.xiao	E3	王玉玲	大江	Kate.Wang	Kate.Wang
-jason.xiao	E3	肖志鋮	大江	jason.xiao	jason.xiao
+jason.xiao	E3	肖志鋮	大江	jason.xiao	jason.xiao	Luke.Yang(杨松)
 jason.xiao	E3	張雅雯	農科	ea8d7582a1a2f44e6d20c20a9ead8510	ea8d7582a1a2f44e6d20c20a9ead8510
 jason.xiao	E3	卫国强	S8	18121084606	18121084606
 jason.xiao	E3	刘凯璇	生科	15811125331	15811125331
 LvJianYu	E5	張文鴻	生科	Kevin.Chang	Kevin.Chang
 LvJianYu	E5	許景雲	生技	Key.Hsu	Key.Hsu
 LvJianYu	E5	陳偉雄	農科	Mars.Chen	Mars.Chen
-LvJianYu	E5	魯建宇	大江	LvJianYu	LvJianYu
+LvJianYu	E5	魯建宇	大江	LvJianYu	LvJianYu	Lulu.Lin(林映汝)
 LvJianYu	E5	周慧燕	S8	Lay.Zhou	Lay.Zhou
 LvJianYu	E5	徐芷陶	大江	Laure.Hsu	Laure.Hsu
 LvJianYu	E5	易鹏飞	生技	KEVIN.YI	KEVIN.YI
@@ -256,12 +249,11 @@ LvJianYu	E5	施晓磊	S8	Eden.Shi	Eden.Shi
 LvJianYu	E5	叶秀青	生科	13450281703	13450281703
 Johnson.Chi	E6	陳彥澤	S8	Leo.Chen	Leo.Chen
 Johnson.Chi	E6	陳冠妤	大江	Blair.Chen	Blair.Chen
-Johnson.Chi	E6	邱晓艳	S8	LiLy.Qiu	LiLy.Qiu
 Johnson.Chi	E6	潘丽骏	国贸	Lillian.Pan	Lillian.Pan
 Johnson.Chi	E6	黃詩茜	大江	Liliana.Huang	Liliana.Huang
 Johnson.Chi	E6	李广哲	生科	Leo.Li	Leo.Li
 Johnson.Chi	E6	張耀宇	農科	Leo.Chang	Leo.Chang
-Johnson.Chi	E6	季偉強	#N/A	Johnson.Chi	Johnson.Chi
+Johnson.Chi	E6	季偉強	#N/A	Johnson.Chi	#N/A	Luna.Liu(刘巧丽）
 Johnson.Chi	E6	李姿莹	生技	18217073085	18217073085
 Johnson.Chi	E6	耿峤宇	生科	15225943231	15225943231
 Joy.Liu	E7	莊涵茹	大江	Maggie.Chuang	Maggie.Chuang
@@ -271,7 +263,6 @@ Joy.Liu	E7	刘巧丽	国贸	Luna.Liu	Luna.Liu
 Joy.Liu	E7	林映汝	生技	Lulu.Lin	Lulu.Lin
 Joy.Liu	E7	廖家儀	美膚	Lucie.Liao	Lucie.Liao
 Joy.Liu	E7	湯宜璇	農科	Livia.Tang	Livia.Tang
-Joy.Liu	E7	劉琰	#N/A	Joy.Liu	Joy.Liu
 Joy.Liu	E7	张露露	S8	Dave	Dave
 Joy.Liu	E7	杨松	生科	18687500930	18687500930
 Katze.Ho	F1	陳怡靜	生技	Mandy.Chen	Mandy.Chen
@@ -281,7 +272,7 @@ Katze.Ho	F1	吳季穎	生活	Ryan.Wu	Ryan.Wu
 Katze.Ho	F1	郭玠呈	大江	Mark.Kuo	Mark.Kuo
 Katze.Ho	F1	王继曼	S8	Mandy.Wang	Mandy.Wang
 Katze.Ho	F1	江宜庭	大江	Mandy.Chiang	Mandy.Chiang
-Katze.Ho	F1	何俊穎	大江	Katze.Ho	Katze.Ho
+Katze.Ho	F1	何俊穎	大江	Katze.Ho	Katze.Ho	Maggie.Chuang(莊涵茹)
 Katze.Ho	F1	郁丽黎	S8	18001771229	18001771229
 Katze.Ho	F1	王平	S8	13764656320	13764656320
 ken	F2	林煥祐	大江	Marshall.Lin	Marshall.Lin
@@ -290,7 +281,7 @@ ken	F2	薛婷婷	生科	Michelle.Xue	Michelle.Xue
 ken	F2	顾培备	S8	Michele.Gu	Michele.Gu
 ken	F2	李秋月	農科	Mavis.Lee	Mavis.Lee
 ken	F2	朱宗利	S7	maura	maura
-ken	F2	林天健	S8	ken	ken
+ken	F2	林天健	S8	ken	ken	Nancy.Huang(黄权权)
 ken	F2	葛成元	S8	GeChengYuan	GeChengYuan
 ken	F2	詹雲翔	生活	Daniel.Chan	Daniel.Chan
 ken	F2	朱琳	生技	15800952761	15800952761
@@ -301,7 +292,7 @@ Kevin.Tsai	F3	蒋淅红	S8	moira	moira
 Kevin.Tsai	F3	王錦佳	農科	Miles.Wang	Miles.Wang
 Kevin.Tsai	F3	施杏怡	生活	May.Shih	May.Shih
 Kevin.Tsai	F3	林俊宇	農科	LinJunYu	LinJunYu
-Kevin.Tsai	F3	蔡智誠	農科	Kevin.Tsai	Kevin.Tsai
+Kevin.Tsai	F3	蔡智誠	農科	Kevin.Tsai	Kevin.Tsai	Vivien.Chen(陳雅雯)
 Kevin.Tsai	F3	陆馨琰	S8	13916954109	13916954109
 Kevin.Tsai	F3	李玥	生技	13816615573	13816615573
 Larry.Lo	F5	魯伊晨	大江	Nancy.Lu	Nancy.Lu
@@ -312,7 +303,7 @@ Larry.Lo	F5	張文倫	美膚	Oliver.Chang	Oliver.Chang
 Larry.Lo	F5	李韋璇	農科	Nunu.Lee	Nunu.Lee
 Larry.Lo	F5	羌伟	S7	Nick.Qiang	Nick.Qiang
 Larry.Lo	F5	李仕红	S7	LiShiHong	LiShiHong
-Larry.Lo	F5	羅竣隆	農科	Larry.Lo	Larry.Lo
+Larry.Lo	F5	羅竣隆	農科	Larry.Lo	Larry.Lo	Lucie.Liao(廖家儀)
 Larry.Lo	F5	张卫星	生技	17612181179	17612181179
 Leif.Wang	F6	謝汶樺	大江	peggy.hsieh	peggy.hsieh
 Leif.Wang	F6	涂智堯	S8	0960512321	0960512321
