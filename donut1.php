@@ -8,7 +8,7 @@ $contents = fgets($file);
 $items = preg_split('/\t/', $contents);
 $display_string = mb_substr( $items[0],0,10,"utf-8") . "...";
 $avg_score = floatval($items[1]);
-
+$avg_score = 52.7;
 ?>
 
 <!DOCTYPE html>
