@@ -160,7 +160,7 @@ group_score["E1-張雅婷"] += 1
 group_score["C3-鄧蓓"] += 2
 group_score["F6-汪興一"] += 3
 group_score["D3-王金良"] += 1
-group_score["C6-劉珊珊"] = group_score["C6-劉珊珊"] - 4.4
+
 
 sorted_by_value = sorted(group_score.items(), key=lambda kv: kv[1], reverse=True)
 
