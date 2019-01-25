@@ -80,7 +80,6 @@ Erik.Hsu	A9	邰莉雅	生技	Daria.Zhuravleva	Daria.Zhuravleva
 Erik.Hsu	A9	孙轶群	生技	13585969831	13585969831
 Evelyn.Chung	B1	翁菁憶	S8	Evelyn.Weng	Evelyn.Weng
 Evelyn.Chung	B1	林慧雯	大江	Willa.Lin	Willa.Lin
-Evelyn.Chung	B1	杨娜	S8	na	na
 Evelyn.Chung	B1	謝孟涓	農科	Irene.Xie	Irene.Xie
 Evelyn.Chung	B1	鍾佳蓉	大江	Evelyn.Chung	Evelyn.Chung
 Evelyn.Chung	B1	余逸凡	大江	Eva.Yu	#N/A
