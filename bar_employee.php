@@ -43,15 +43,15 @@ while (!feof($file)) {
 
             var data = [
                 {x:1, w:"<?php echo($rankings[$employee_key[0]]); ?>", label:"🏆<?php echo($employee_key[0]); ?>", color: "#ED553B", fontcolor: "#FFF"},
-                {x:2, w:"<?php echo($rankings[$employee_key[1]]); ?>", label:"②<?php echo($employee_key[1]); ?>", color: "#ED713B",  fontcolor: "#FFF"},
-                {x:3, w:"<?php echo($rankings[$employee_key[2]]); ?>", label:"③<?php echo($employee_key[2]); ?>", color: "#ED8A3B",  fontcolor: "#FFF"},
-                {x:4, w:"<?php echo($rankings[$employee_key[3]]); ?>", label:"④<?php echo($employee_key[3]); ?>", color: "#EDAC3B",  fontcolor: "#000"},
-                {x:5, w:"<?php echo($rankings[$employee_key[4]]); ?>", label:"⑤<?php echo($employee_key[4]); ?>", color: "#FFE100",  fontcolor: "#000"},
-                {x:6, w:"<?php echo($rankings[$employee_key[5]]); ?>", label:"⑥<?php echo($employee_key[5]); ?>", color: "#068587",  fontcolor: "#FFF"},
-                {x:7, w:"<?php echo($rankings[$employee_key[6]]); ?>", label:"⑦<?php echo($employee_key[6]); ?>", color: "#4FB99F",  fontcolor: "#fff"},
-                {x:8, w:"<?php echo($rankings[$employee_key[7]]); ?>", label:"⑧<?php echo($employee_key[7]); ?>", color: "#4FCD9F",  fontcolor: "#000"},
-                {x:9, w:"<?php echo($rankings[$employee_key[8]]); ?>", label:"⑨<?php echo($employee_key[8]); ?>", color: "#4FDC9F",  fontcolor: "#000"},
-                {x:10, w:"<?php echo($rankings[$employee_key[9]]); ?>", label:"⑩<?php echo($employee_key[9]); ?>", color: "#4FFF9F", fontcolor: "#000"},
+                {x:2, w:"<?php echo($rankings[$employee_key[1]]); ?>", label:"🏆<?php echo($employee_key[1]); ?>", color: "#ED713B",  fontcolor: "#FFF"},
+                {x:3, w:"<?php echo($rankings[$employee_key[2]]); ?>", label:"🏆<?php echo($employee_key[2]); ?>", color: "#ED8A3B",  fontcolor: "#FFF"},
+                {x:4, w:"<?php echo($rankings[$employee_key[3]]); ?>", label:"🏆<?php echo($employee_key[3]); ?>", color: "#EDAC3B",  fontcolor: "#000"},
+                {x:5, w:"<?php echo($rankings[$employee_key[4]]); ?>", label:"🏆<?php echo($employee_key[4]); ?>", color: "#FFE100",  fontcolor: "#000"},
+                {x:6, w:"<?php echo($rankings[$employee_key[5]]); ?>", label:"🏆<?php echo($employee_key[5]); ?>", color: "#068587",  fontcolor: "#FFF"},
+                {x:7, w:"<?php echo($rankings[$employee_key[6]]); ?>", label:"②<?php echo($employee_key[6]); ?>", color: "#4FB99F",  fontcolor: "#fff"},
+                {x:8, w:"<?php echo($rankings[$employee_key[7]]); ?>", label:"②<?php echo($employee_key[7]); ?>", color: "#4FCD9F",  fontcolor: "#000"},
+                {x:9, w:"<?php echo($rankings[$employee_key[8]]); ?>", label:"②<?php echo($employee_key[8]); ?>", color: "#4FDC9F",  fontcolor: "#000"},
+                {x:10, w:"<?php echo($rankings[$employee_key[9]]); ?>", label:"②<?php echo($employee_key[9]); ?>", color: "#4FFF9F", fontcolor: "#000"},
             ];
 
             var s = d3.select('body')
